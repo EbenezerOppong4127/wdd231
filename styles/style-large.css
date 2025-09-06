@@ -1,0 +1,348 @@
+/* Larger Views ******************************/
+@media (min-width: 1024px) {
+    /* Header improvements */
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .contenedor {
+        gap: 1.5rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 155px;
+    }
+
+    header span {
+        font-size: var(--font-size-large);
+        margin-left: 30px;
+    }
+
+    /* Main content layout */
+    main {
+        width: 85%;
+        max-width: 1200px;
+        margin: 30px auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+        align-items: start;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Section improvements */
+    main section {
+        margin: 0;
+        height: fit-content;
+    }
+
+    section h2 {
+        font-size: var(--font-size-large);
+        padding: 20px 0;
+    }
+
+    section ul {
+        padding: 0 50px;
+        margin: 20px 0;
+    }
+
+    section li {
+        font-size: var(--font-size-base);
+        margin-bottom: 10px;
+    }
+
+    section p {
+        font-size: var(--font-size-base);
+        margin: 0 0 20px 0;
+    }
+
+    /* Course work section */
+    .courseWork-box {
+        grid-column: 1;
+    }
+
+    /* Country section */
+    .country-box {
+        grid-column: 2;
+    }
+
+    .country-box picture {
+        padding: 20px;
+    }
+
+    .country-box img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Certificate section - spans full width */
+    .certificate-box {
+        grid-column: 1 / -1;
+        margin-top: 2rem;
+    }
+
+    .certificate-box h2 {
+        font-size: 2rem;
+        padding: 25px 0;
+    }
+
+    /* Button layout */
+    .boxButton {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .courseButton {
+        min-width: 140px;
+        padding: 16px 32px;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+    }
+
+    /* Course grid improvements */
+    .boxcertificate01 {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        padding: 40px;
+    }
+
+    .course {
+        padding: 30px 20px;
+        min-height: 100px;
+    }
+
+    .course h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Credits display */
+    #totalCreditsCert01 {
+        font-size: 1.4rem;
+        padding: 25px;
+    }
+
+    /* Dialog improvements */
+    dialog {
+        width: 80%;
+        max-width: 700px;
+        padding: 2.5rem;
+    }
+
+    dialog h2 {
+        font-size: 1.8rem;
+        color: var(--accent-purple);
+        margin-bottom: 1.5rem;
+    }
+
+    dialog h3 {
+        font-size: 1.4rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1rem;
+    }
+
+    dialog p {
+        font-size: var(--font-size-base);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    dialog button {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        top: 25px;
+        right: 25px;
+    }
+
+    /* Footer improvements */
+    footer {
+        padding: 2.5rem;
+    }
+
+    .social-links {
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-links svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    footer p {
+        font-size: var(--font-size-base);
+        padding: 10px;
+    }
+
+    /* Navigation improvements */
+    nav a {
+        padding: 1.2rem 20px;
+        font-size: var(--font-size-base);
+    }
+
+    /* Hover effects enhancement */
+    .course:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25);
+    }
+
+    .courseButton:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+    }
+
+    main section:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25);
+    }
+
+    /* Animation improvements */
+    .avatar {
+        animation-duration: 8s;
+    }
+
+    /* Ensure no single column layout */
+    @supports (display: grid) {
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .certificate-box {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2.5em;
+    }
+
+    main h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .courseWork-box {
+        grid-column: 1 / 2;
+    }
+
+    .country-box {
+        grid-column: 2 / 4;
+    }
+
+    .certificate-box {
+        grid-column: 1 / -1;
+        margin-top: 3rem;
+    }
+
+    .certificate-box h2 {
+        font-size: 2.2rem;
+        padding: 30px 0;
+    }
+
+    .boxcertificate01 {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 50px;
+    }
+
+    .course {
+        padding: 35px 25px;
+        min-height: 120px;
+    }
+
+    .course h3 {
+        font-size: 1.3rem;
+    }
+
+    .boxButton {
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .courseButton {
+        min-width: 160px;
+        padding: 18px 36px;
+        font-size: 1.1rem;
+    }
+
+    #totalCreditsCert01 {
+        font-size: 1.6rem;
+        padding: 30px;
+    }
+
+    header {
+        padding: 2rem 3rem;
+    }
+
+    footer {
+        padding: 3rem;
+    }
+
+    .social-links {
+        gap: 2.5rem;
+    }
+
+    .social-links a {
+        width: 65px;
+        height: 65px;
+    }
+
+    .social-links svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1800px) {
+    main {
+        max-width: 1600px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .courseWork-box {
+        grid-column: 1 / 2;
+    }
+
+    .country-box {
+        grid-column: 2 / 5;
+    }
+
+    .certificate-box {
+        grid-column: 1 / -1;
+    }
+
+    .boxcertificate01 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px;
+        padding: 60px;
+    }
+
+    main h1 {
+        font-size: 4.5rem;
+    }
+
+    .certificate-box h2 {
+        font-size: 2.5rem;
+    }
+}

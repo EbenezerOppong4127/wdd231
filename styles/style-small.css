@@ -1,0 +1,665 @@
+:root {
+    /* Modern Color Palette - Vibrant Tech Theme */
+    --primary-dark: #0f172a;        /* Slate 900 - deep dark blue */
+    --primary-medium: #1e293b;      /* Slate 800 - medium dark */
+    --primary-light: #334155;       /* Slate 700 - lighter slate */
+    --accent-purple: #7c3aed;       /* Vibrant purple */
+    --accent-cyan: #06b6d4;         /* Bright cyan */
+    --accent-emerald: #10b981;      /* Fresh emerald */
+    --accent-orange: #f59e0b;       /* Warm orange */
+    --neutral-light: #f8fafc;       /* Very light gray */
+    --neutral-medium: #64748b;      /* Medium gray */
+    --text-dark: #1e293b;           /* Dark text */
+    --text-light: #f8fafc;          /* Light text */
+
+    /* Semantic Color Assignments */
+    --background-primary: var(--primary-dark);
+    --background-secondary: var(--neutral-light);
+    --background-accent: var(--accent-purple);
+    --text-primary: var(--text-dark);
+    --text-secondary: var(--neutral-medium);
+    --text-inverse: var(--text-light);
+
+    /* Text Colors - FIXED: Removed undefined variables */
+    --headline-color-on-white: var(--text-primary);
+    --headline-color-on-color: var(--text-inverse);
+    --paragraph-color-on-white: var(--text-primary);
+    --paragraph-color-on-color: var(--text-inverse);
+    --paragraph-background-color: var(--neutral-light);
+
+    /* Navigation Colors */
+    --nav-link-color: var(--text-inverse);
+    --nav-background-color: var(--primary-medium);
+    --nav-hover-link-color: var(--text-inverse);
+    --nav-hover-background-color: var(--accent-cyan);
+
+    /* Typography */
+    --barlow-regular-font-family: "Barlow", sans-serif;
+    --barlow-regular-font-weight: 400;
+    --barlow-regular-font-style: normal;
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-weight: 400;
+    --lato-regular-font-style: normal;
+
+    --font-size-small: 16px;
+    --font-size-base: 20px;
+    --font-size-large: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    font-family: var(--lato-regular-font-family);
+}
+
+p {
+    font-family: var(--barlow-regular-font-family);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--neutral-light) 0%, #e2e8f0 100%);
+}
+
+/*Header */
+header,
+footer {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    color: var(--text-inverse);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    fill: var(--accent-cyan);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(124, 58, 237, 0.4);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(124, 58, 237, 0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(124, 58, 237, 0.4);
+        transform: translatey(0px);
+    }
+}
+
+.avatar {
+    width: 80px;
+    height: 141px;
+    box-sizing: border-box;
+    border: 3px var(--accent-cyan) solid;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(124, 58, 237, 0.4);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    margin-left: 20px;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    flex-grow: 1;
+    color: var(--text-inverse);
+}
+
+/* Mobile hamburger menu */
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    background: var(--accent-purple);
+    border: none;
+    color: var(--text-inverse);
+    cursor: pointer;
+    padding: 0.75rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.3);
+}
+
+#menu:hover {
+    background: var(--accent-cyan);
+    transform: scale(1.05);
+}
+
+nav {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-light) 100%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav a {
+    display: block;
+    color: var(--text-inverse);
+    text-align: center;
+    padding: 1rem 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--accent-cyan);
+    transition: width 0.3s ease;
+}
+
+nav a:hover:not(.active) {
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+    color: var(--text-inverse);
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a.active {
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-emerald));
+    color: var(--text-inverse);
+    font-weight: bold;
+}
+
+/*Content*******************/
+main {
+    flex: 1;
+    margin: 20px;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1.5em;
+}
+
+main section {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    background: var(--background-secondary);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    transition: all 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+}
+
+section h2 {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    color: var(--text-inverse);
+    margin: 0;
+    border-radius: 15px 15px 0 0;
+    font-size: var(--font-size-base);
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+section ul {
+    padding: 0 40px;
+    margin: 15px 0;
+}
+
+section li {
+    text-align: left;
+    font-size: var(--font-size-small);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+picture {
+    padding: 15px;
+    max-width: 300px;
+}
+
+section img {
+    height: auto;
+    width: 85%;
+    display: block;
+    border-radius: 12px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.02);
+}
+
+section p {
+    font-size: var(--font-size-small);
+    margin: 0 0 15px 0;
+    color: var(--text-primary);
+}
+
+/* Enhanced Certificate Section Styles */
+.certificate-box {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.certificate-box h2 {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    color: var(--text-inverse);
+    margin: 0;
+    border-radius: 15px 15px 0 0;
+    font-size: var(--font-size-large);
+    padding: 20px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boxButton {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--background-secondary);
+    border-left: 1px solid rgba(124, 58, 237, 0.1);
+    border-right: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.courseButton {
+    min-width: 120px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: var(--text-inverse);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accent-purple), var(--primary-medium));
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+}
+
+.courseButton:hover {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+}
+
+.courseButton.active {
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-emerald));
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Course Cards Container */
+.boxcertificate01 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    background: var(--background-secondary);
+    border-left: 1px solid rgba(124, 58, 237, 0.1);
+    border-right: 1px solid rgba(124, 58, 237, 0.1);
+    min-height: 200px;
+}
+
+/* Individual Course Cards */
+.course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-purple);
+    padding: 25px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--background-secondary), #f8fafc);
+    min-height: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
+    border-color: var(--accent-cyan);
+}
+
+.course h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+/* Completed vs Non-completed Course Styles */
+.courseNoComplete {
+    background: linear-gradient(135deg, var(--background-secondary), #f1f5f9);
+    color: var(--text-primary);
+    border-color: var(--neutral-medium);
+}
+
+.courseNoComplete h3 {
+    color: var(--text-primary);
+}
+
+.courseComplete {
+    background: linear-gradient(135deg, var(--accent-purple), var(--primary-medium));
+    color: var(--text-inverse);
+    border-color: var(--accent-emerald);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+.courseComplete h3 {
+    color: var(--text-inverse);
+}
+
+.course:hover h3 {
+    letter-spacing: 1px;
+}
+
+.courseComplete:hover {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+    border-color: var(--accent-orange);
+}
+
+/* Credits Display */
+#totalCreditsCert01 {
+    text-align: center;
+    font-weight: bold;
+    color: var(--accent-purple);
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    border-radius: 0 0 15px 15px;
+    font-size: 1.2rem;
+}
+
+/* Dialog Modal Styles */
+dialog {
+    border: 2px solid var(--accent-purple);
+    border-radius: 15px;
+    padding: 2rem;
+    background: var(--background-secondary);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+dialog button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--accent-purple);
+    background: var(--accent-purple);
+    color: var(--text-inverse);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+dialog button:hover {
+    background: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    transform: scale(1.05);
+}
+
+dialog h2 {
+    color: var(--accent-purple);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+dialog h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+dialog p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/*Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-emerald));
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-inverse);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    padding: 8px;
+    color: var(--text-inverse);
+}
+
+/* Responsive Design for Certificate Section */
+@media (min-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        display: block;
+        background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-light) 100%);
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        flex: 1 1 100%;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child {
+        border-right: none;
+    }
+
+    main {
+        max-width: 768px;
+        margin: 30px auto;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        font-size: 3rem;
+    }
+
+    main section {
+        max-width: none;
+    }
+
+    section {
+        flex-basis: 15em;
+        flex-grow: 1;
+    }
+
+    .boxcertificate01 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .course {
+        padding: 25px 15px;
+        min-height: 90px;
+    }
+
+    .course h3 {
+        font-size: 1.1rem;
+    }
+
+    .boxButton {
+        justify-content: center;
+    }
+
+    .courseButton {
+        flex: 0 1 auto;
+        min-width: 140px;
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .boxcertificate01 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 35px;
+    }
+
+    .courseButton {
+        min-width: 140px;
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for course cards appearing */
+.course {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.course[style*="display: none"] {
+    display: none !important;
+}
+
+/* Ensure smooth filtering transitions */
+.boxcertificate01 {
+    transition: all 0.3s ease;
+}
