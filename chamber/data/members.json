@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Company A",
+    "address": "123 Main St, City, Country",
+    "phone": "+1234567890",
+    "website": "http://www.companya.com",
+    "image": "images/directory/camplogo1.webp",
+    "membership_level": "Gold",
+    "other_information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "name": "Company B",
+    "address": "456 Elm St, Town, Country",
+    "phone": "+0987654321",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo2.webp",
+    "membership_level": "Silver",
+    "other_information": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "Company C",
+    "address": "789 Oak St, Village, Country",
+    "phone": "+1122334455",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo3.webp",
+    "membership_level": "Bronze",
+    "other_information": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "name": "Company D",
+    "address": "321 Pine St, Hamlet, Country",
+    "phone": "+5544332211",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo4.webp",
+    "membership_level": "Gold",
+    "other_information": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "name": "Company E",
+    "address": "567 Cedar St, Village, Country",
+    "phone": "+7788990011",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo5 .webp",
+    "membership_level": "Silver",
+    "other_information": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "name": "Company F",
+    "address": "101 Maple St, Town, Country",
+    "phone": "+9988776655",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo5 .webp",
+    "membership_level": "Bronze",
+    "other_information": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+  },
+  {
+    "name": "Company G",
+    "address": "999 Walnut St, City, Country",
+    "phone": "+1122334455",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo5 .webp",
+    "membership_level": "Gold",
+    "other_information": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+  },
+  {
+    "name": "Company H",
+    "address": "999 Walnut St, City, Country",
+    "phone": "+1122334455",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo5 .webp",
+    "membership_level": "Gold",
+    "other_information": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+  },
+  {
+    "name": "Company I",
+    "address": "999 Walnut St, City, Country",
+    "phone": "+1122334455",
+    "website": "https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg",
+    "image": "images/directory/camplogo6.webp",
+    "membership_level": "Gold",
+    "other_information": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+  }
+]

@@ -1,0 +1,1148 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: sans-serif
+}
+
+body {
+    margin: 0
+}
+
+
+
+
+:root {
+    --dark-green: #003c2f;
+    --light-green: #22ad01;
+    --light-grey: #f2f7f2;
+    --green: #005542;
+    --brown: #865f48;
+    --orange: #ee8146;
+    --yellow: #dfbe1b;
+    --grey-green: #65816d;
+    --grey: #d3dcd4;
+    --form-field: #fffee6;
+    --template-form-text: #a09c35
+}
+
+
+
+
+
+body {
+    color: var(--dark-green);
+    font-family: Gellix,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%
+}
+
+h1 {
+    color: var(--dark-green);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 100%
+}
+
+h2 {
+    color: var(--dark-green);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 130%
+}
+
+h3 {
+    color: var(--dark-green);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 100%
+}
+
+h4 {
+    color: var(--dark-green);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100%
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 120%
+}
+
+h6 {
+    color: var(--dark-green);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%
+}
+
+p {
+    color: var(--dark-green);
+    text-align: left;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%
+}
+
+a {
+    color: var(--light-green);
+    letter-spacing: -.2px;
+    text-decoration: none
+}
+
+a:hover {
+    color: var(--light-green)
+}
+
+li {
+    margin-bottom: 9px
+}
+
+img {
+    display: inline-block
+}
+
+
+
+.overflow-hidden {
+    display: block;
+    overflow: hidden
+}
+
+
+.text-align-right {
+    text-align: right
+}
+
+.text-weight-bold {
+    font-weight: 700
+}
+
+.text-weight-bold.text-align-right.pricing {
+    padding-top: 0
+}
+
+.form_radio-label.is-active {
+    color: #22ad01
+}
+
+.max-width-medium {
+    width: 100%;
+    max-width: 32rem
+}
+
+
+
+.background-color-white {
+    background-color: #fff;
+    overflow: visible
+}
+
+.background-color-white.box-shadow.box-radius-20 {
+    border-radius: 20px
+}
+
+.background-color-white.box-shadow.box-radius-20.max-height-full {
+    height: 100%
+}
+
+.background-color-white.box-shadow.box-radius-20.max-height-full.flex-vertical.justify-end {
+    justify-content: space-between
+}
+
+.background-color-white.box-shadow.padding-50 {
+    padding: 50px
+}
+
+.text-opacity-50 {
+    opacity: .5
+}
+
+
+
+
+.page-wrapper {
+    overflow: hidden
+}
+
+
+.container-large {
+    width: 100%;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px
+}
+
+
+
+.container-large.flex-gap {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    flex-direction: column;
+    display: flex
+}
+
+.container-large.flex-gap.gap-20 {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px
+}
+
+.overflow-scroll {
+    overflow: scroll
+}
+
+
+
+.text-align-center {
+    text-align: center
+}
+
+
+
+
+.text-style-quote {
+    border-left: .25rem solid #e2e2e2;
+    margin-bottom: 0;
+    padding: 0 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5
+}
+
+.align-center {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.button {
+    color: #fff;
+    text-align: center;
+    background-color: #22ad01;
+    border-style: none;
+    border-radius: 36px;
+    padding: 12px 33px 14px;
+    font-weight: 500;
+    line-height: 140%;
+    transition: background-color .3s
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #2bb90a
+}
+
+.button.w--redirected-checked {
+    border-width: 0
+}
+
+.button.is-text {
+    color: var(--dark-green);
+    background-color: transparent
+}
+
+.button.is-text:hover {
+    background-color: var(--light-grey)
+}
+
+
+
+
+
+
+
+.grid._3col {
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.grid._3col.gap-150 {
+    grid-column-gap: 150px;
+    grid-row-gap: 60px
+}
+
+.grid._3col.gap-150.mobile-22 {
+    grid-column-gap: 150px
+}
+
+.grid._3col._1row {
+    -webkit-text-fill-color: inherit;
+    background-clip: border-box;
+    grid-template-rows: auto auto auto;
+    justify-content: center
+}
+
+.grid._3col._1row.background-light {
+    -webkit-text-fill-color: inherit;
+    background-clip: border-box;
+    grid-template-rows: auto auto
+}
+
+.grid._3col._6row {
+    grid-template-rows: auto auto auto auto auto auto
+}
+
+.grid._3col._2row {
+    grid-template-rows: auto auto
+}
+
+.grid._3col.gap-0.max-width-640 {
+    grid-template-rows: auto
+}
+
+.grid._4col {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row
+}
+
+.grid._4col.gap-150 {
+    grid-column-gap: 150px;
+    grid-row-gap: 60px
+}
+
+.grid._4col._2ow {
+    grid-template-rows: auto auto
+}
+
+.grid._2col._6row {
+    grid-column-gap: 1px;
+    grid-row-gap: 1px
+}
+
+.grid._2col._1-row {
+    grid-template-rows: auto
+}
+
+.grid._5col {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+}
+
+
+
+.hide-desktop {
+    display: none
+}
+
+
+
+.toggle-custom {
+    overflow: hidden
+}
+
+.toggle-custom.faq {
+    border-bottom: 1px solid #d3dcd4;
+    height: 84px;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.toggle-custom.faq.first {
+    border-bottom-color: var(--light-green)
+}
+
+.text-size-20 {
+    text-align: left;
+    font-size: 20px
+}
+
+.text-size-20.text-align-center {
+    text-align: center
+}
+
+.max-width-600 {
+    width: 100%;
+    max-width: 600px
+}
+
+.max-width-600.align-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+
+.max-width-600.align-center.text-align-center {
+    display: block
+}
+
+.max-width-600.align-center.gap {
+    grid-column-gap: 13px;
+    grid-row-gap: 13px
+}
+
+.image._1 {
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%
+}
+
+.image._2 {
+    width: 51%
+}
+
+.image._4 {
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+
+
+.image.persona-banner.alt {
+    left: 0;
+    right: auto
+}
+
+.image.persona-banner.screen {
+    object-fit: contain;
+    object-position: 50% 100%;
+    width: auto;
+    padding-top: 50px;
+    bottom: 0;
+    left: 0;
+    right: auto
+}
+
+
+
+
+.hero-image-wrapper-persona {
+    z-index: 1;
+    background-image: url(https://assets-global.website-files.com/635ac95…/6632011…_pexels-fauxels-3182755.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    width: 100%;
+    min-width: 428px;
+    height: 100%;
+    min-height: 554px;
+    position: relative;
+}
+
+
+.position-absolute {
+    z-index: 3;
+    position: absolute;
+    top: auto;
+
+    right: auto;
+}
+
+.margin-box.top-120 {
+    margin-top: 120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Styles for desktop */
+.header-container {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+#menu {
+    display: none; /* Initially hide the menu button on desktop */
+}
+
+.navigation {
+    display: block;
+    clear: both;
+    margin-top: -61px;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 767px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 150px; /* Adjust logo size for smaller screens */
+    }
+
+    #menu {
+        display: block; /* Show the menu button on mobile */
+        margin-top: 10px; /* Add space between the logo and button */
+    }
+
+    .navigation {
+        display: none; /* Hide navigation links on mobile */
+    }
+}
+
+/*Discover*/
+
+/* Existing styles */
+/* Add or modify rules and declarations as needed */
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr); /* Adjust the widths as needed */
+    grid-gap: 20px;
+}
+
+.sidebar {
+    /* Styles for sidebar */
+}
+
+.main-content {
+    /* Styles for main content area */
+}
+
+/* Lazy loading */
+.image-gallery img {
+    opacity: 0; /* Initially hide images */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Image hover effect */
+.image-gallery img:hover {
+    /* Add your desired hover effect */
+    transform: scale(1.1); /* Example: Scale up image on hover */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Mobile view */
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: black;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: black;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: black;
+}
+
+.days li .active {
+    padding: 5px;
+    background: black;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+
+
+/*Code Getting */
+
+
+
+
+/* Header/Blog Title */
+/*.header {*/
+/*    padding: 30px;*/
+/*    font-size: 40px;*/
+/*    text-align: center;*/
+/*    background: white;*/
+/*}*/
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    /*padding: 20px;*/
+}
+
+/* Add a card effect for articles */
+.card-discover {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*!* Footer *!*/
+/*.footer {*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*    background: #ddd;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+
+/*Code Getting */
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+.to-do-ul ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+.to-do-ul ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.to-do-ul ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+.to-do-ul ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+.to-do-ul ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.to-do-ul ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.to-do-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.to-do-close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Style the header */
+.to-do-header {
+    background-color: black;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.to-do-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+.to-do-input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.to-do-addBtn {
+    padding: 10px;
+    width: 13%;
+    background: white;
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 7px;
+    font-weight: bolder;
+}
+
+.to-do-addBtn:hover {
+    background-color: #bbb;
+}
+.fakeimg {
+    height: 220px; /* Set the height of the container */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.fakeimg img {
+    width: 100%; /* Set the width of the image to fill the container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Ensure the image behaves as a block element */
+}
+
+.main-txt-dis{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-stretch: extra-condensed;
+    font-family: ui-monospace;
+}
+
+.main-txt-dis-txt{
+    font-size: 19px;
+
+    font-family: serif;
+    font-style: italic;
+}
+
+
+.user-disc-mes{
+    text-align: center;
+    margin-top: 28px;
+    font-size: 21px;
+    font-family: emoji;
+}
+
+
+
+
+
+
+
+
+
+/* Media query for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .to-do-header {
+        background-color: black;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .to-do-title {
+        margin-bottom: 10px;
+    }
+
+    .to-do-addBtn {
+        display: inline-block;
+        padding: 4px 60px 9px 18px !important;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        /* width: 28px; */
+        text-align: center;
+        margin-left: 129px;
+        margin-top: 14px;
+    }
+    .le-corps {
+        margin-left: 337px !important;
+    }
+}
+
+
+
+.la-form{
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+.le-corps {
+    margin-left: 337px !important;
+}
+
+.main-container.join-chamber-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+@media (min-width: 768px) {
+    .main-container.join-chamber-custom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.cube.join-chamber-custom {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.cube h2.join-chamber-custom {
+    margin-bottom: 10px;
+}
+
+.login_register.join-chamber-custom {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.login_register a.join-chamber-custom {
+    font-size: 1em;
+    padding: 10px 55px;
+    border: none;
+    width: 50%;
+    text-align: center;
+}
+
+.login_register a.login.join-chamber-custom {
+    border-radius: 15px;
+    background-color: transparent;
+    color: black;
+}
+
+.login_register a.register.join-chamber-custom {
+    border-radius: 15px;
+    background: linear-gradient(90deg, #003A74, #006AD5);
+    color: white;
+}
+
+.form.join-chamber-custom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Ensuring sufficient contrast for input fields */
+.form.join-chamber-custom input.join-chamber-custom,
+.form.join-chamber-custom select.join-chamber-custom,
+.form.join-chamber-custom textarea.join-chamber-custom {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    color: #333333; /* Darker text color for better contrast */
+    background-color: #FFFFFF; /* Light background color */
+    font-family: "Roboto Mono", sans-serif;
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+    margin-bottom: 15px;
+}
+
+/* Example for specific input field, though the above rule already covers it */
+input#first-name.join-chamber-custom {
+    color: #333333; /* Darker text color for better contrast */
+    background-color: #FFFFFF; /* Light background color */
+}
+
+
+.fp.join-chamber-custom {
+    width: 100%;
+    display: flex;
+    color: #5881D0;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login_btn.join-chamber-custom {
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    background-color: #003A74;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: linear-gradient(-90deg, #003A74, #006AD5);
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .9);
+}
+
+.benefits.join-chamber-custom {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+}
+
+.benefits.join-chamber-custom h3.join-chamber-custom {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefits.join-chamber-custom ul.join-chamber-custom {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits.join-chamber-custom li.join-chamber-custom {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.benefits.join-chamber-custom li.join-chamber-custom::before {
+    content: "•";
+    color: #003A74;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+
+
+
+/*/directory*/
+
+/* Add your CSS styles here */
+
+/* * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }*/
+
+.directoring-main {
+    margin: 0 auto;
+    padding: 0.5rem;
+    max-width: 700px;
+    background-color: #fff;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.directoring-menu {
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #bed;
+    text-align: center;
+}
+
+.directoring-menu button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.directoring-section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
+}
+
+.directoring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.directoring-grid .directoring-section {
+    text-align: center;
+}
+
+.directoring-grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+.directoring-grid .directoring-section > * {
+    margin: 0.1rem;
+}
+
+.directoring-grid h3 {
+    font-family: "Caveat", cursive;
+}
+
+.directoring-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.directoring-list .directoring-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.directoring-list .directoring-section > * {
+    margin: 0 1rem;
+}
+
+.directoring-list .directoring-section img {
+    display: none; /* smaller viewports only */
+}
+
+.directoring-list .directoring-section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.directoring-list .directoring-section:nth-child(even) {
+    background-color: #bed;
+}
+
+.directoring-section h3 {
+    font-size: 1.5rem;
+}
+
+.directoring-section p {
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.directoring-section a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: navy;
+    letter-spacing: 1.1pt;
+}
+
+.directoring-img {
+    height: 75px;
+    max-width: 100%; /* Images are jerks - Seattle*/
+}
+
+
