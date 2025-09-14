@@ -78,6 +78,17 @@ h6 {
     line-height: 100%
 }
 
+
+.drmain_one{
+    margin-bottom: 50px
+}
+
+.hedr-container{
+    background-color: #1e681ed4
+}
+.nav-link-navig{
+    color: black ; font-weight: bold
+}
 p {
     color: var(--dark-green);
     text-align: left;
