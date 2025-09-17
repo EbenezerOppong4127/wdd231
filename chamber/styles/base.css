@@ -1314,21 +1314,4 @@ address {
 }
 
 /* High contrast mode support */
-@media (prefers-contrast: high) {
-    #grid, #list {
-        border: 2px solid currentColor;
-    }
 
-    .navigation a {
-        border: 1px solid currentColor;
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
