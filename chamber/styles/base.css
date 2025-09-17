@@ -1157,3 +1157,178 @@ input#first-name.join-chamber-custom {
 }
 
 
+/* Add these styles to your base.css file for 100% accessibility */
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Layout shift prevention - Performance optimization */
+.directoring-img {
+    width: 95px;
+    height: 73px;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.logo img {
+    width: 150px;
+    height: 71px;
+    max-width: 150px;
+    display: block;
+}
+
+.directoring-grid {
+    min-height: 400px; /* Reserve initial space */
+}
+
+.directoring-section {
+    min-height: 250px; /* Reserve space for each card */
+    padding: 1rem;
+}
+
+/* Improve button accessibility */
+#grid, #list {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#grid:focus, #list:focus {
+    outline: 3px solid #005cbf;
+    outline-offset: 2px;
+}
+
+#grid:hover, #list:hover {
+    background-color: #0056b3;
+}
+
+#grid[aria-pressed="true"], #list[aria-pressed="true"] {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Menu button accessibility */
+#menu {
+    min-height: 44px;
+    min-width: 44px;
+    border: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+#menu:focus {
+    outline: 3px solid #005cbf;
+    outline-offset: 2px;
+}
+
+/* Navigation accessibility */
+.navigation a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+}
+
+.navigation a:focus {
+    outline: 3px solid #005cbf;
+    outline-offset: 2px;
+}
+
+/* Address styling */
+address {
+    font-style: normal;
+}
+
+/* Loading state */
+#loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Company card improvements */
+.directoring-section h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.directoring-section div {
+    margin-bottom: 0.5rem;
+}
+
+.directoring-section a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.directoring-section a:hover,
+.directoring-section a:focus {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* For responsive images */
+@media (max-width: 767px) {
+    .logo img {
+        width: 120px;
+        height: 57px;
+        max-width: 120px;
+    }
+
+    .directoring-section {
+        min-height: 200px;
+        padding: 0.5rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #grid, #list {
+        border: 2px solid currentColor;
+    }
+
+    .navigation a {
+        border: 1px solid currentColor;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

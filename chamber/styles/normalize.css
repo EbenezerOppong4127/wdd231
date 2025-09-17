@@ -347,3 +347,38 @@ template {
 [hidden] {
     display: none;
 }
+
+/* ... your existing CSS in base.css ... */
+
+/* At the very end of base.css, add this: */
+
+/* Layout shift prevention - Performance optimization */
+.directoring-img {
+    width: 95px;
+    height: 73px;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.logo img {
+    width: 150px;
+    height: 71px;
+    max-width: 150px;
+    display: block;
+}
+
+.directoring-grid {
+    min-height: 400px; /* Reserve initial space */
+}
+
+.directoring-section {
+    min-height: 250px; /* Reserve space for each card */
+}
+
+/* For responsive images */
+@media (max-width: 767px) {
+    .logo img {
+        width: 120px;
+        height: 57px;
+        max-width: 120px;
+    }
+}
