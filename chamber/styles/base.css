@@ -1372,6 +1372,78 @@ address {
 .spotlight-section {
     margin-top: 50px;
 }
+/* Replace all inline styles with these CSS classes */
 
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header Styles */
+.chamber-header {
+    background-color: #1e681ed4;
+}
+
+/* Navigation Styles */
+.nav-link {
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.chamber-logo {
+    width: 245px;
+}
+
+.hero-img-bg {
+    background-image: url(../images/pic1.webp);
+}
+
+.hero-overlay-img {
+    width: 211px;
+}
+
+/* Call to Action Styles */
+.cta-container {
+    margin-top: 89px;
+}
+
+.tools-section {
+    margin-top: 79px;
+}
+
+.service-title {
+    margin: 0;
+}
+
+/* Event Section Styles */
+.event-bg-img {
+    /* Position as needed for background */
+}
+
+.event-separator {
+    height: 50px;
+    margin: 10px 0;
+}
+
+.event-description {
+    margin-bottom: 19px;
+}
+
+/* Spotlight Section Styles */
+.spotlight-section {
+    margin-top: 50px;
+}
+
+/* Remove any existing inline styles and replace with these classes */
+/* Make sure to update your existing CSS file accordingly */
 /* Remove any existing inline styles and replace with these classes */
 /* Make sure to update your existing CSS file accordingly */
