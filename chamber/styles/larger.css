@@ -323,7 +323,8 @@ nav {
 
 .carousel-item {
     flex: 0 0 auto;
-    margin-right: 20px; /* Adjust spacing between items */
+    /*margin-right: 20px; !* Adjust spacing between items *!*/
+    margin-bottom: 68px;
 }
 
 @keyframes carousel-animation {
