@@ -22,7 +22,7 @@ async function loadMembers() {
 
         // Filter for gold and silver members only
         const qualifiedMembers = members.filter(member =>
-            member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
+            member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'|| member.membershipLevel === 'Bronze'
         );
         console.log('✅ Qualified members (Gold/Silver):', qualifiedMembers);
         console.log('🎯 Qualified members count:', qualifiedMembers.length);
@@ -30,13 +30,13 @@ async function loadMembers() {
         if (qualifiedMembers.length === 0) {
             console.warn('⚠️ No qualified members found! Showing all members instead.');
             // Fallback to show all members if no Gold/Silver found
-            const selectedMembers = getRandomMembers(members, Math.min(3, members.length));
+            const selectedMembers = getRandomMembers(members, Math.min(5, members.length));
             displayMemberSpotlight(selectedMembers);
             return;
         }
 
         // Randomly select 2-3 members
-        const selectedMembers = getRandomMembers(qualifiedMembers, Math.min(3, qualifiedMembers.length));
+        const selectedMembers = getRandomMembers(qualifiedMembers, Math.min(5, qualifiedMembers.length));
         console.log('🎲 Selected members for spotlight:', selectedMembers);
 
         // Display the selected members
