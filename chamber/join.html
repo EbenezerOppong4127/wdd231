@@ -2,140 +2,139 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Membership to join Chamber of Commerce</title>
-    <meta name="description" content="The Chamber Join Page">
-    <meta name="author" content="Chamber of Commerce and Discover Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Chamber - Membership Application</title>
+    <meta name="description" content="Apply for membership in our Chamber of Commerce. Choose from NP, Bronze, Silver, or Gold membership levels and join our business community today.">
+    <meta name="author" content="Tro Opong Ebenezer">
     <link href="styles/base.css" rel="stylesheet">
     <link href="styles/larger.css" rel="stylesheet">
     <link href="styles/normalize.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
-    <!-- Link to Google Fonts API -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <meta content="Home Page" property="og:title">
-    <meta content="website" property="og:type">
-    <meta content="https://assets.ldscdn.org/0d/7b/0d7bb93794eb11ecb29ceeeeac1ee20345ef0d4f/church_logo.png" property="og:image">
-    <meta content="https://churchofjesuschrist.org" property="og:url">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Chamber of Commerce">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join Our Chamber - Membership Application">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ebenezeroppong4127.github.io/wdd230/chamber/images/chamber.png">
-    <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd230/chamber/">
-
-
+    <meta property="og:description" content="Apply for membership in our Chamber of Commerce. Choose from multiple membership levels and join our thriving business community.">
+    <meta property="og:image" content="https://ebenezeroppong4127.github.io/wdd231/chamber/images/chamber.png">
+    <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd231/chamber/join.html">
 </head>
 <body>
-<div class="header-container">
-    <header class="header" style="background-color: #1e681ed4">
+<header>
+    <div class="header-container">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo.png" alt="Chamber of Commerce Logo">
                 </a>
             </div>
         </div>
-    </header>
-    <button id="menu"></button>
-</div>
-
-
-<nav class="navigation">
-<!--    <a  style="color: black ; font-weight: bold"  href="https://ebenezeroppong4127.github.io/wdd230/week01/chamber-site-plan.html" target="_blank"  title="Site Plan">Site Plan</a>-->
-    <a style="color: black ; font-weight: bold"  href="index.html"  title="Home" >Home</a>
-    <a style="color: black ; font-weight: bold"  href="discover.html" title="Discover">Discover</a>
-    <a style="color: black ; font-weight: bold"  href="join.html" title="Join">Join</a>
-    <a style="color: black ; font-weight: bold"  href="directory.html" title="directory">Directory</a>
-</nav>
-<h1>Membership to join Chamber of Commerce</h1>
-
-
-
-<!-- MAIN CONTAINER -->
-<div class="main-container join-chamber-custom la-form le-corps">
-    <div class="cube join-chamber-custom">
-        <h2 class="join-chamber-custom"> Application Form</h2>
-
-        <!-- FORMULAIRE -->
-        <form class="form join-chamber-custom" method="get" action="thankyou.html">
-            <label for="first-name" class="join-chamber-custom">First Name</label>
-            <input type="text" id="first-name" name="first-name" required class="join-chamber-custom">
-
-            <label for="last-name" class="join-chamber-custom">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required class="join-chamber-custom">
-
-            <label for="title" class="join-chamber-custom">Title/Position</label>
-            <input type="text" id="title" name="title" pattern="[a-zA-Z\s\-]{8,}" class="join-chamber-custom">
-
-            <label for="email" class="join-chamber-custom">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" class="join-chamber-custom">
-
-            <label for="phone" class="join-chamber-custom">Mobile Phone Number</label>
-            <input type="tel" id="phone" name="phone" required class="join-chamber-custom">
-
-            <label for="organization" class="join-chamber-custom">Business/Organization Name</label>
-            <input type="text" id="organization" name="organization" required class="join-chamber-custom">
-
-            <label for="membership-level" class="join-chamber-custom">Membership Level</label>
-            <select id="membership-level" name="membership-level" class="join-chamber-custom">
-                <option value="np">NP Membership (No Fee)</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-            </select>
-
-            <label for="description" class="join-chamber-custom">Business/Organization Description</label>
-            <textarea id="description" name="description" class="join-chamber-custom" style="height: 130px"></textarea>
-            <input type="hidden" id="timestamp" name="timestamp" value="" class="join-chamber-custom">
-            <button type="submit" class="login_btn join-chamber-custom">Submit Application</button>
-        </form>
+        <button id="menu">Menu</button>
     </div>
 
-    <!-- ASIDE FOR MEMBERSHIP BENEFITS -->
-    <!-- ASIDE FOR MEMBERSHIP BENEFITS -->
-    <aside class="benefits join-chamber-custom">
-        <h3 class="join-chamber-custom">Membership Benefits</h3>
-        <ul class="join-chamber-custom">
-            <li class="join-chamber-custom">NP Membership: Access to events and basic resources.</li>
-            <li class="join-chamber-custom">Bronze Membership: Includes all NP benefits plus additional networking opportunities.</li>
-            <li class="join-chamber-custom">Silver Membership: Includes all Bronze benefits plus training sessions and advertising options.</li>
-            <li class="join-chamber-custom">Gold Membership: Includes all Silver benefits plus premium event access and spotlight advertising.</li>
-        </ul>
-    </aside>
-</div>
+    <nav class="navigation">
+        <a href="index.html" title="Home">Home</a>
+        <a href="discover.html" title="Discover">Discover</a>
+        <a href="join.html" title="Join">Join</a>
+        <a href="directory.html" title="directory">Directory</a>
+    </nav>
+</header>
 
+<main>
+    <h1>Join Our Chamber - Membership Application</h1>
 
+    <!-- MAIN CONTAINER -->
+    <div class="main-container join-chamber-custom la-form le-corps">
+        <div class="cube join-chamber-custom">
+            <h2 class="join-chamber-custom">Application Form</h2>
+
+            <!-- FORM -->
+            <form class="form join-chamber-custom" method="get" action="thankyou.html">
+                <label for="first-name" class="join-chamber-custom">First Name</label>
+                <input type="text" id="first-name" name="first-name" required class="join-chamber-custom">
+
+                <label for="last-name" class="join-chamber-custom">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required class="join-chamber-custom">
+
+                <label for="title" class="join-chamber-custom">Title/Position</label>
+                <input type="text" id="title" name="title" pattern="[a-zA-Z\s\-]{7,}" class="join-chamber-custom" title="Please enter at least 7 characters, only letters, spaces, and hyphens allowed">
+
+                <label for="email" class="join-chamber-custom">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" class="join-chamber-custom">
+
+                <label for="phone" class="join-chamber-custom">Mobile Phone Number</label>
+                <input type="tel" id="phone" name="phone" required class="join-chamber-custom">
+
+                <label for="organization" class="join-chamber-custom">Business/Organization Name</label>
+                <input type="text" id="organization" name="organization" required class="join-chamber-custom">
+
+                <label for="membership-level" class="join-chamber-custom">Membership Level</label>
+                <select id="membership-level" name="membership-level" class="join-chamber-custom">
+                    <option value="np">NP Membership (No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <label for="description" class="join-chamber-custom">Business/Organization Description</label>
+                <textarea id="description" name="description" class="join-chamber-custom" rows="5"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="" class="join-chamber-custom">
+
+                <button type="submit" class="login_btn join-chamber-custom">Submit Membership Application</button>
+            </form>
+        </div>
+
+        <!-- ASIDE FOR MEMBERSHIP BENEFITS -->
+        <aside class="benefits join-chamber-custom">
+            <h3 class="join-chamber-custom">Membership Benefits</h3>
+            <ul class="join-chamber-custom">
+                <li class="join-chamber-custom">NP Membership: Access to events and basic resources.</li>
+                <li class="join-chamber-custom">Bronze Membership: Includes all NP benefits plus additional networking opportunities.</li>
+                <li class="join-chamber-custom">Silver Membership: Includes all Bronze benefits plus training sessions and advertising options.</li>
+                <li class="join-chamber-custom">Gold Membership: Includes all Silver benefits plus premium event access and spotlight advertising.</li>
+            </ul>
+        </aside>
+    </div>
+</main>
 
 <footer id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <h3>Contact Us</h3>
-                <p class="txt-gr"> <span>Chamber of Commerce</span> <span>123 Main Street</span> <span>COte D'Ivoire, Abidjan, +225</span> <span>Phone: (123) 456-7890</span> <span>Email: tro.jule@gmail.com</span> </p>
-
-
+                <p class="txt-gr">
+                    <span>Chamber of Commerce</span>
+                    <span>123 Main Street</span>
+                    <span>COte D'Ivoire, Abidjan, +225</span>
+                    <span>Phone: (123) 456-7890</span>
+                    <span>Email: tro.jule@gmail.com</span>
+                </p>
             </div>
             <div class="col-md-4">
                 <h3>About Me</h3>
-                <p class="txt-gr"> <span>Tro Opong Ebenezer</span> <span>WDD 230 Student</span> <span>Brigham Young University-Idaho</span> </p>
-
+                <p class="txt-gr">
+                    <span>Tro Opong Ebenezer</span>
+                    <span>WDD 231 Student</span>
+                    <span>Brigham Young University-Idaho</span>
+                </p>
             </div>
             <div class="col-md-4">
                 <h3>Last Modified</h3>
-                <p class="txt-gr"> <span id="last-modified">Loading...</span> </p>
+                <p class="txt-gr">
+                    <span id="last-modified">Loading...</span>
+                </p>
             </div>
         </div>
     </div>
 </footer>
 
-
 <script src="scripts/jquery.js"></script>
-
-
 <script src="scripts/scripts.js"></script>
-<!--<script src="scripts/discover.js"></script>-->
 </body>
 </html>
