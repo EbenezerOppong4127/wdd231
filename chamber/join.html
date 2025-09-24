@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -23,6 +22,7 @@
     <meta property="og:description" content="Apply for membership in our Chamber of Commerce. Choose from multiple membership levels and join our thriving business community.">
     <meta property="og:image" content="https://ebenezeroppong4127.github.io/wdd231/chamber/images/chamber.png">
     <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd231/chamber/join.html">
+
 </head>
 <body>
 <header>
@@ -40,7 +40,7 @@
     <nav class="navigation">
         <a href="index.html" title="Home">Home</a>
         <a href="discover.html" title="Discover">Discover</a>
-        <a href="join.html" title="Join">Join</a>
+        <a href="join.html" title="Join" class="current">Join</a>
         <a href="directory.html" title="directory">Directory</a>
     </nav>
 </header>
@@ -48,60 +48,180 @@
 <main>
     <h1>Join Our Chamber - Membership Application</h1>
 
-    <!-- MAIN CONTAINER -->
-    <div class="main-container join-chamber-custom la-form le-corps">
-        <div class="cube join-chamber-custom">
-            <h2 class="join-chamber-custom">Application Form</h2>
+    <!-- Membership Level Cards with Modals -->
+    <section class="membership-cards">
+        <div class="membership-card np" data-modal="npModal">
+            <h3>NP Membership</h3>
+            <div class="price">FREE</div>
+            <ul class="features">
+                <li>✓ Access to events</li>
+                <li>✓ Basic resources</li>
+                <li>✓ Newsletter subscription</li>
+            </ul>
+            <button type="button">View Details</button>
+        </div>
 
-            <!-- FORM -->
-            <form class="form join-chamber-custom" method="get" action="thankyou.html">
-                <label for="first-name" class="join-chamber-custom">First Name</label>
-                <input type="text" id="first-name" name="first-name" required class="join-chamber-custom">
+        <div class="membership-card bronze" data-modal="bronzeModal">
+            <h3>Bronze Membership</h3>
+            <div class="price">$50/year</div>
+            <ul class="features">
+                <li>✓ All NP benefits</li>
+                <li>✓ Networking opportunities</li>
+                <li>✓ Business directory listing</li>
+            </ul>
+            <button type="button">View Details</button>
+        </div>
 
-                <label for="last-name" class="join-chamber-custom">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required class="join-chamber-custom">
+        <div class="membership-card silver" data-modal="silverModal">
+            <h3>Silver Membership</h3>
+            <div class="price">$100/year</div>
+            <ul class="features">
+                <li>✓ All Bronze benefits</li>
+                <li>✓ Training sessions</li>
+                <li>✓ Advertising options</li>
+            </ul>
+            <button type="button">View Details</button>
+        </div>
 
-                <label for="title" class="join-chamber-custom">Title/Position</label>
-                <input type="text" id="title" name="title" pattern="[a-zA-Z\s\-]{7,}" class="join-chamber-custom" title="Please enter at least 7 characters, only letters, spaces, and hyphens allowed">
+        <div class="membership-card gold" data-modal="goldModal">
+            <h3>Gold Membership</h3>
+            <div class="price">$200/year</div>
+            <ul class="features">
+                <li>✓ All Silver benefits</li>
+                <li>✓ Premium event access</li>
+                <li>✓ Spotlight advertising</li>
+            </ul>
+            <button type="button">View Details</button>
+        </div>
+    </section>
 
-                <label for="email" class="join-chamber-custom">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu" class="join-chamber-custom">
+    <!-- Application Form -->
+    <section class="form-section">
+        <h2>Application Form</h2>
+        <form method="get" action="thankyou.html">
+            <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" title="First Name" autocomplete="given-name" required>
+            </div>
 
-                <label for="phone" class="join-chamber-custom">Mobile Phone Number</label>
-                <input type="tel" id="phone" name="phone" required class="join-chamber-custom">
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name" required>
+            </div>
 
-                <label for="organization" class="join-chamber-custom">Business/Organization Name</label>
-                <input type="text" id="organization" name="organization" required class="join-chamber-custom">
+            <div class="form-group">
+                <label for="title">Title/Position</label>
+                <input type="text" id="title" name="title" title="Title or Position (minimum 7 characters)" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" title="Please enter at least 7 characters, only letters, spaces, and hyphens allowed">
+            </div>
 
-                <label for="membership-level" class="join-chamber-custom">Membership Level</label>
-                <select id="membership-level" name="membership-level" class="join-chamber-custom">
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" title="Email Address" autocomplete="email" required placeholder="example@byui.edu" pattern="[a-zA-Z0-9._%+\-]+@byui\.edu">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Mobile Phone Number *</label>
+                <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Business/Organization Name *</label>
+                <input type="text" id="organization" name="organization" title="Business or Organization Name" autocomplete="organization" required>
+            </div>
+
+            <div class="form-group">
+                <label for="membership-level">Membership Level</label>
+                <select id="membership-level" name="membership-level" title="Membership Level" autocomplete="off">
                     <option value="np">NP Membership (No Fee)</option>
                     <option value="bronze">Bronze Membership</option>
                     <option value="silver">Silver Membership</option>
                     <option value="gold">Gold Membership</option>
                 </select>
+            </div>
 
-                <label for="description" class="join-chamber-custom">Business/Organization Description</label>
-                <textarea id="description" name="description" class="join-chamber-custom" rows="5"></textarea>
+            <div class="form-group">
+                <label for="description">Business/Organization Description</label>
+                <textarea id="description" name="description" title="Business Description" autocomplete="off" rows="5"></textarea>
+            </div>
 
-                <input type="hidden" id="timestamp" name="timestamp" value="" class="join-chamber-custom">
+            <input type="hidden" id="timestamp" name="timestamp" value="">
 
-                <button type="submit" class="login_btn join-chamber-custom">Submit Membership Application</button>
-            </form>
-        </div>
-
-        <!-- ASIDE FOR MEMBERSHIP BENEFITS -->
-        <aside class="benefits join-chamber-custom">
-            <h3 class="join-chamber-custom">Membership Benefits</h3>
-            <ul class="join-chamber-custom">
-                <li class="join-chamber-custom">NP Membership: Access to events and basic resources.</li>
-                <li class="join-chamber-custom">Bronze Membership: Includes all NP benefits plus additional networking opportunities.</li>
-                <li class="join-chamber-custom">Silver Membership: Includes all Bronze benefits plus training sessions and advertising options.</li>
-                <li class="join-chamber-custom">Gold Membership: Includes all Silver benefits plus premium event access and spotlight advertising.</li>
-            </ul>
-        </aside>
-    </div>
+            <button type="submit" class="submit-btn">Submit Membership Application</button>
+        </form>
+    </section>
 </main>
+
+<!-- Modals for Membership Details -->
+<div id="npModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>NP Membership Details</h2>
+        <p><strong>Cost:</strong> FREE</p>
+        <h3>Benefits Include:</h3>
+        <ul>
+            <li>Access to all chamber events and workshops</li>
+            <li>Monthly newsletter with business tips and local news</li>
+            <li>Basic networking opportunities</li>
+            <li>Access to online business resources</li>
+            <li>Community event notifications</li>
+        </ul>
+        <p>Perfect for non-profit organizations and those just starting their business journey!</p>
+    </div>
+</div>
+
+<div id="bronzeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bronze Membership Details</h2>
+        <p><strong>Cost:</strong> $50 per year</p>
+        <h3>All NP Benefits Plus:</h3>
+        <ul>
+            <li>Priority networking event invitations</li>
+            <li>Business directory listing with basic information</li>
+            <li>Discounted rates for chamber-sponsored events</li>
+            <li>Access to member-only networking sessions</li>
+            <li>Business referral opportunities</li>
+        </ul>
+        <p>Great for small businesses looking to expand their network!</p>
+    </div>
+</div>
+
+<div id="silverModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silver Membership Details</h2>
+        <p><strong>Cost:</strong> $100 per year</p>
+        <h3>All Bronze Benefits Plus:</h3>
+        <ul>
+            <li>Professional development training sessions</li>
+            <li>Enhanced business directory listing with logo</li>
+            <li>Advertising opportunities in chamber publications</li>
+            <li>Priority speaker opportunities at events</li>
+            <li>Access to business mentorship programs</li>
+            <li>Quarterly business spotlight features</li>
+        </ul>
+        <p>Ideal for growing businesses ready to increase their visibility!</p>
+    </div>
+</div>
+
+<div id="goldModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Gold Membership Details</h2>
+        <p><strong>Cost:</strong> $200 per year</p>
+        <h3>All Silver Benefits Plus:</h3>
+        <ul>
+            <li>Premium event access and VIP seating</li>
+            <li>Featured business spotlight advertising</li>
+            <li>Exclusive Gold member networking events</li>
+            <li>Priority consideration for chamber board positions</li>
+            <li>Complimentary booth space at chamber trade shows</li>
+            <li>Personal business consultation sessions</li>
+            <li>Logo placement on chamber website and materials</li>
+        </ul>
+        <p>Perfect for established businesses seeking maximum exposure and influence!</p>
+    </div>
+</div>
 
 <footer id="footer">
     <div class="container">
@@ -134,7 +254,58 @@
     </div>
 </footer>
 
-<script src="scripts/jquery.js"></script>
-<script src="scripts/scripts.js"></script>
+<script>
+    // Set timestamp when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const timestampField = document.getElementById('timestamp');
+        const now = new Date();
+        timestampField.value = now.toISOString();
+
+        // Update last modified
+        document.getElementById('last-modified').textContent = document.lastModified;
+    });
+
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.membership-card');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close');
+
+        // Open modal when card is clicked
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        // Close modal when X is clicked
+        closeButtons.forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+    });
+
+    // Form validation enhancement
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const titleField = document.getElementById('title');
+        if (titleField.value && titleField.value.length < 7) {
+            e.preventDefault();
+            alert('Title/Position must be at least 7 characters long.');
+            titleField.focus();
+        }
+    });
+</script>
 </body>
 </html>

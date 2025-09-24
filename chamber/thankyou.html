@@ -3,23 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
-    <link rel="stylesheet" href="styles/base.css">
-</head>
+    <title>Thank You - Chamber Application Received</title>
+    <meta name="description" content="Thank you for your Chamber of Commerce membership application. Your application has been received and will be processed.">
+    <meta name="author" content="Tro Opong Ebenezer">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <link href="styles/normalize.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        .thank-you-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .application-details {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .detail-value {
+            color: #212529;
+        }
+
+        .next-steps {
+            background: #e3f2fd;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .detail-value {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
 <body>
 <header>
-    <!-- Your header content -->
+    <div class="header-container">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Chamber of Commerce Logo">
+                </a>
+            </div>
+        </div>
+        <button id="menu">Menu</button>
+    </div>
+
+    <nav class="navigation">
+        <a href="index.html" title="Home">Home</a>
+        <a href="discover.html" title="Discover">Discover</a>
+        <a href="join.html" title="Join">Join</a>
+        <a href="directory.html" title="directory">Directory</a>
+    </nav>
 </header>
-<nav>
-    <!-- Your navigation content -->
-</nav>
+
 <main>
-    <h1>Thank You for Your Application!</h1>
-    <p>We appreciate your interest in joining the chamber of commerce. We will review your application and get back to you shortly.</p>
+    <div class="thank-you-container">
+        <div class="success-icon">✓</div>
+
+        <h1>Thank You for Your Application!</h1>
+
+        <p>We have received your Chamber of Commerce membership application and appreciate your interest in joining our business community.</p>
+
+        <div class="application-details">
+            <h2>Application Details</h2>
+
+            <div class="detail-row">
+                <span class="detail-label">First Name:</span>
+                <span class="detail-value" id="display-first-name">-</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Last Name:</span>
+                <span class="detail-value" id="display-last-name">-</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Email Address:</span>
+                <span class="detail-value" id="display-email">-</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Phone Number:</span>
+                <span class="detail-value" id="display-phone">-</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Business/Organization:</span>
+                <span class="detail-value" id="display-organization">-</span>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Application Date:</span>
+                <span class="detail-value" id="display-date">-</span>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h3>What's Next?</h3>
+            <ul style="text-align: left;">
+                <li>We will review your application within 2-3 business days</li>
+                <li>You will receive a confirmation email with payment instructions (if applicable)</li>
+                <li>Once approved, you'll receive your membership packet and welcome materials</li>
+                <li>You'll be invited to our next new member orientation</li>
+            </ul>
+        </div>
+
+        <p><strong>Questions?</strong> Contact us at <a href="mailto:tro.jule@gmail.com">tro.jule@gmail.com</a> or call (123) 456-7890.</p>
+
+        <a href="index.html" class="back-button">Return to Home</a>
+    </div>
 </main>
-<footer>
-    <!-- Your footer content -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Contact Us</h3>
+                <p class="txt-gr">
+                    <span>Chamber of Commerce</span>
+                    <span>123 Main Street</span>
+                    <span>COte D'Ivoire, Abidjan, +225</span>
+                    <span>Phone: (123) 456-7890</span>
+                    <span>Email: tro.jule@gmail.com</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>About Me</h3>
+                <p class="txt-gr">
+                    <span>Tro Opong Ebenezer</span>
+                    <span>WDD 231 Student</span>
+                    <span>Brigham Young University-Idaho</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>Last Modified</h3>
+                <p class="txt-gr">
+                    <span id="last-modified">Loading...</span>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update last modified
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Display form data
+        const firstName = urlParams.get('first-name') || 'Not provided';
+        const lastName = urlParams.get('last-name') || 'Not provided';
+        const email = urlParams.get('email') || 'Not provided';
+        const phone = urlParams.get('phone') || 'Not provided';
+        const organization = urlParams.get('organization') || 'Not provided';
+        const timestamp = urlParams.get('timestamp');
+
+        document.getElementById('display-first-name').textContent = firstName;
+        document.getElementById('display-last-name').textContent = lastName;
+        document.getElementById('display-email').textContent = email;
+        document.getElementById('display-phone').textContent = phone;
+        document.getElementById('display-organization').textContent = organization;
+
+        // Format and display timestamp
+        if (timestamp) {
+            const date = new Date(timestamp);
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            document.getElementById('display-date').textContent = date.toLocaleDateString('en-US', options);
+        } else {
+            document.getElementById('display-date').textContent = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+    });
+</script>
 </body>
 </html>
