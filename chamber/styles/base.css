@@ -1800,7 +1800,32 @@ address {
         padding: 1rem;
     }
 }
+.disv-as-lower{
+    margin-bottom: 50px
+}
+.dis-menu-a{
+    color: black ; font-weight: bold
+}
 
+.dis-hide-title{
+    display: none
+}
+
+.disv-header-color{
+    background-color: #1e681ed4
+}
+.dis-sub-todo{
+    color: white;font-weight: bolder;
+}
+
+.disv-calendar-sp{
+    font-size:18px;color: white;font-weight: bolder
+}
+
+.to-disblack{
+
+    color: black
+}
 /* Remove any existing inline styles and replace with these classes */
 /* Make sure to update your existing CSS file accordingly */
 /* Remove any existing inline styles and replace with these classes */
