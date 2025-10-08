@@ -2,9 +2,243 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Foodie Restaurant</title>
+
+    <!-- Google Fonts - Same as your main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <!--- google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+            rel="stylesheet">
+
+    <!--- preload image-->
+    <link rel="preload" as="image" href="images/hero-banner.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="images/hero-banner-bg.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="images/hero-bg.jpg">
 </head>
 <body>
+
+<!--- #HEADER-->
+
+<header class="header" data-header>
+    <div class="container">
+
+        <h1>
+            <a href="#" class="logo">Local Delices<span class="span">.</span></a>
+        </h1>
+
+        <nav class="navbar" data-navbar>
+            <ul class="navbar-list">
+
+                <li class="nav-item">
+                    <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a href="foodlist.html" class="navbar-link" data-nav-link>Shop</a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="header-btn-group">
+            <button class="search-btn" aria-label="Search" data-search-btn>
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+
+            <button class="btn btn-hover">Reservation</button>
+
+            <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+
+<!--
+  - #SEARCH BOX
+-->
+
+<div class="search-container" data-search-container>
+
+    <div class="search-box">
+        <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+               class="search-input">
+
+        <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+            <ion-icon name="search-outline"></ion-icon>
+        </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+</div>
+
+
+
+
+
+
+
+<!-- ===== HERO BANNER =====
+     Large image section with title -->
+<section class="contact-hero">
+    <div>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Get in touch with us for reservations, catering, or any questions.</p>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTACT SECTION =====
+     Contains the form and contact information -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+
+            <!-- LEFT SIDE: Contact Form -->
+            <div class="contact-form">
+                <p class="form-subtitle">Send us a Message</p>
+                <h2>Get In Touch</h2>
+
+                <!-- Form starts here - data will be submitted when user clicks button -->
+                <form id="contactForm">
+
+                    <!-- Name input field -->
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <!-- Email input field -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <!-- Phone input field -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <!-- Subject dropdown -->
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="reservation">Table Reservation</option>
+                            <option value="catering">Catering Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message textarea -->
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- RIGHT SIDE: Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+
+                <!-- Address card -->
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>Our Location</h3>
+                        <p>153 Williamson Plaza,<br>Maggieberg, MT 09514</p>
+                    </div>
+                </div>
+
+                <!-- Phone card -->
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h3>Phone Number</h3>
+                        <p>+1 (062) 109-9222<br>Mon-Fri: 8:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Email card -->
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-content">
+                        <h3>Email Address</h3>
+                        <p>Info@YourGmail24.com<br>We reply within 24 hours</p>
+                    </div>
+                </div>
+
+                <!-- Hours card -->
+                <div class="info-card">
+                    <div class="info-icon">🕒</div>
+                    <div class="info-content">
+                        <h3>Opening Hours</h3>
+                        <p>Monday-Friday: 08:00-22:00<br>
+                            Tuesday 4PM: Till Midnight<br>
+                            Saturday: 10:00-16:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MAP SECTION =====
+     Embedded Google Maps showing restaurant location -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-container">
+            <!-- Google Maps iframe - replace with your actual location -->
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750455!2d-73.98784368459395!3d40.75889797932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 <a href="index.html">Foodie Restaurant</a>. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="scripts/contact.js" defer></script>
+
 
 </body>
 </html>
