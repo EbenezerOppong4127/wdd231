@@ -1,0 +1,485 @@
+
+    /* ===== STEP 1: CSS VARIABLES ===== */
+:root {
+    --rich-black-fogra-29: hsl(210, 26%, 7%);
+    --deep-saffron: hsl(119, 43%, 61%);
+    --dark-orange: hsl(119, 43%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --isabelline: hsl(38, 44%, 96%);
+    --cinnabar: hsl(3, 90%, 55%);
+    --cultured: hsl(0, 0%, 93%);
+    --gainsboro: hsl(0, 0%, 87%);
+    --gray-x-11-gray: hsl(0, 0%, 73%);
+
+    --ff-rubik: 'Rubik', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+
+    --shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+    --shadow-2: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+/* ===== STEP 2: RESET STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-roboto);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--sonic-silver);
+    background-color: var(--isabelline);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+/* ===== STEP 3: CONTAINER ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== STEP 4: HEADER ===== */
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: var(--shadow-1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--ff-rubik);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--rich-black-fogra-29);
+    text-decoration: none;
+}
+
+.logo .span {
+    color: var(--deep-saffron);
+}
+
+/* ===== STEP 5: FOOD MENU SECTION ===== */
+.food-menu {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--cinnabar);
+    font-family: var(--ff-rubik);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-title .span {
+    color: var(--deep-saffron);
+}
+
+.section-text {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* ===== STEP 6: FILTER BUTTONS ===== */
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--rich-black-fogra-29);
+    font-family: var(--ff-rubik);
+    font-weight: 500;
+    padding: 8px 25px;
+    border: 1px solid var(--cultured);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    border-color: var(--deep-saffron);
+}
+
+/* ===== STEP 7: FOOD MENU GRID ===== */
+.food-menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    list-style: none;
+}
+
+/* ===== STEP 8: FOOD CARD STYLING ===== */
+.food-menu-card {
+    background-color: var(--white);
+    padding: 40px;
+    box-shadow: var(--shadow-2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.food-menu-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card image container */
+.card-banner {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Badge (discount label) */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--cinnabar);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+/* Wrapper for category and rating */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.category {
+    font-family: var(--ff-rubik);
+    font-weight: 500;
+    color: var(--sonic-silver);
+}
+
+/* Star rating */
+.rating-wrapper {
+    display: flex;
+    gap: 3px;
+    color: var(--deep-saffron);
+}
+
+.rating-wrapper ion-icon {
+    font-size: 16px;
+}
+
+/* Card title */
+.card-title {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Price section */
+.price-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--ff-rubik);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.price-text {
+    color: var(--cinnabar);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.price {
+    color: var(--deep-saffron);
+    font-size: 20px;
+}
+
+.del {
+    color: var(--gray-x-11-gray);
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    font-family: var(--ff-rubik);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: var(--dark-orange);
+}
+
+/* ===== STEP 9: MODAL OVERLAY =====
+   This is the dark background that covers the page */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* When modal is active, show it */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* ===== STEP 10: MODAL CONTENT BOX ===== */
+.modal-content {
+    background-color: var(--white);
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+/* Animation for modal appearing */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== STEP 11: MODAL CLOSE BUTTON ===== */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--cinnabar);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background-color: var(--dark-orange);
+}
+
+/* ===== STEP 12: MODAL BODY LAYOUT ===== */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Left side - Image */
+.modal-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Right side - Details */
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-title {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.modal-category {
+    display: inline-block;
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.modal-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-rating .stars {
+    display: flex;
+    gap: 3px;
+    color: var(--deep-saffron);
+}
+
+.modal-description {
+    color: var(--sonic-silver);
+    line-height: 1.8;
+}
+
+/* Ingredients list */
+.ingredients-title {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ingredients-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ingredient-item {
+    background-color: var(--isabelline);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--sonic-silver);
+}
+
+/* Price section in modal */
+.modal-price-section {
+    border-top: 2px solid var(--cultured);
+    padding-top: 20px;
+}
+
+.modal-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-price {
+    font-size: 36px;
+    color: var(--deep-saffron);
+    font-weight: 700;
+}
+
+.modal-original-price {
+    font-size: 24px;
+    color: var(--gray-x-11-gray);
+    text-decoration: line-through;
+}
+
+.modal-discount {
+    background-color: var(--cinnabar);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Order button in modal */
+.order-btn {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    font-family: var(--ff-rubik);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: var(--dark-orange);
+}
+
+/* ===== STEP 13: RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .modal-image {
+        height: 300px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Hide food items by default */
+.food-menu-card.hidden {
+    display: none;
+}

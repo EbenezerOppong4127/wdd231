@@ -1,0 +1,320 @@
+
+    /* ===== STEP 1: CSS VARIABLES =====
+       These are reusable color and style values that match your main site.
+       Think of them like settings you can change in one place. */
+:root {
+    --rich-black-fogra-29: hsl(210, 26%, 7%);
+    --deep-saffron: hsl(119, 43%, 61%);
+    --dark-orange: hsl(119, 43%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --isabelline: hsl(38, 44%, 96%);
+    --cinnabar: hsl(3, 90%, 55%);
+    --cultured: hsl(0, 0%, 93%);
+
+    /* Font families from your site */
+    --ff-rubik: 'Rubik', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-shadows-into-light: 'Shadows Into Light', cursive;
+}
+
+/* ===== STEP 2: RESET STYLES =====
+   This removes default browser styling so everything looks consistent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== STEP 3: BASE BODY STYLES =====
+   Sets up the basic look of the page */
+body {
+    font-family: var(--ff-roboto);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--sonic-silver);
+    background-color: var(--isabelline);
+}
+
+/* ===== STEP 4: HEADER SECTION =====
+   This creates the top navigation bar */
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling - matches your main site */
+.logo {
+    font-family: var(--ff-rubik);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--rich-black-fogra-29);
+    text-decoration: none;
+}
+
+.logo .span {
+    color: var(--deep-saffron);
+}
+
+/* Navigation links */
+.nav-link {
+    color: var(--rich-black-fogra-29);
+    text-decoration: none;
+    font-family: var(--ff-rubik);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--dark-orange);
+}
+
+/* ===== STEP 5: HERO BANNER =====
+   This is the large image section at the top */
+.contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-hero h1 {
+    font-family: var(--ff-rubik);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== STEP 6: MAIN CONTAINER =====
+   This holds all the contact content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== STEP 7: CONTACT SECTION LAYOUT =====
+   This creates a two-column layout: form on left, info on right */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+/* ===== STEP 8: CONTACT FORM STYLING ===== */
+.contact-form {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: var(--cinnabar);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Form group - wraps each input field */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    color: var(--rich-black-fogra-29);
+    font-family: var(--ff-rubik);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--cultured);
+    border-radius: 4px;
+    font-family: var(--ff-roboto);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* When user clicks on input, change border color */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--deep-saffron);
+}
+
+/* Textarea specific styling */
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    font-family: var(--ff-rubik);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: var(--dark-orange);
+}
+
+/* ===== STEP 9: CONTACT INFO SECTION ===== */
+.contact-info h2 {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Info card - each contact detail box */
+.info-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Icon styling */
+.info-icon {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* Info content */
+.info-content h3 {
+    font-family: var(--ff-rubik);
+    color: var(--rich-black-fogra-29);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.info-content p {
+    color: var(--sonic-silver);
+    line-height: 1.8;
+}
+
+/* ===== STEP 10: MAP SECTION ===== */
+.map-section {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===== STEP 11: FOOTER ===== */
+.footer {
+    background-color: var(--rich-black-fogra-29);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer p {
+    color: var(--cultured);
+}
+
+.footer a {
+    color: var(--deep-saffron);
+    text-decoration: none;
+}
+
+/* ===== STEP 12: RESPONSIVE DESIGN =====
+   Makes the page look good on mobile devices */
+@media (max-width: 768px) {
+    /* Stack the form and info vertically on mobile */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Smaller hero text on mobile */
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    /* Smaller padding on mobile */
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
