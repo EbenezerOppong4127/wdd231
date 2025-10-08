@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chamber of Commerce Directory</title>
+
+    <meta name="description" content="Explore the Chamber of Commerce Directory. Connect with local businesses, discover services, and foster networking opportunities for community growth.">
+    <meta name="author" content="Tro Opong Ebenezer Jules Samuel">
+
+    <!-- Security headers for Best Practices -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+
+
+    <!-- Critical CSS first -->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <!-- Non-critical CSS with media attribute -->
+    <link href="styles/larger.css" rel="stylesheet" media="(min-width: 37.5em)">
+
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description" content="Discover local businesses and services in our Chamber of Commerce Directory. Connect, network, and grow with your community.">
+    <meta property="og:image" content="https://ebenezeroppong4127.github.io/wdd231/chamber/images/chamber.png">
+    <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+<div class="header-container">
+    <header class="header hedr-container">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Chamber of Commerce logo" width="150" height="71">
+                </a>
+            </div>
+        </div>
+    </header>
+    <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+</div>
+
+<nav class="navigation">
+    <a class="nav-link-navig" href="index.html" title="Home">Home</a>
+    <a class="nav-link-navig" href="discover.html" title="Discover">Discover</a>
+    <a class="nav-link-navig" href="join.html" title="Join">Join</a>
+    <a class="nav-link-navig" href="directory.html" title="directory" aria-current="page">Directory</a>
+</nav>
+
+<main class="directoring-main drmain_one">
+    <h1>Chamber of Commerce Directory</h1>
+    <div class="directoring-menu" role="group" aria-label="View options">
+        <button id="grid" aria-label="Switch to grid view" aria-pressed="true">
+            Grid
+        </button>
+        <button id="list" aria-label="Switch to list view" aria-pressed="false">
+            List
+        </button>
+    </div>
+    <hr>
+    <article class="directoring-grid" role="region" aria-label="Business directory">
+        <h2 class="sr-only">Companies Details</h2>
+        <div id="loading" aria-live="polite" aria-atomic="true">Loading business directory...</div>
+    </article>
+</main>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Contact Us</h3>
+                <address class="txt-gr">
+                    <span>Chamber of Commerce</span>
+                    <span>123 Main Street</span>
+                    <span>Côte D'Ivoire, Abidjan, +225</span>
+                    <span>Phone: <a href="tel:+2251234567890">(123) 456-7890</a></span>
+                    <span>Email: <a href="mailto:tro.jule@gmail.com">tro.jule@gmail.com</a></span>
+                </address>
+            </div>
+            <div class="col-md-4">
+                <h3>About Me</h3>
+                <p class="txt-gr">
+                    <span>Tro Opong Ebenezer</span>
+                    <span>WDD 231 Student</span>
+                    <span>Brigham Young University-Idaho</span>
+                    <span>Phone: <a href="https://github.com/EbenezerOppong4127/wdd231">Github</a></span>
+                    <span>Email: <a href="https://www.linkedin.com/">Linkedin</a></span>
+                    <span>Email: <a href="https://ebenezeroppong4127.github.io/wdd131/project">Aout Me</a></span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>Last Modified</h3>
+                <p class="txt-gr">
+                    <span id="last-modified">Loading...</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts/directory.js"></script>
+</body>
+</html>
