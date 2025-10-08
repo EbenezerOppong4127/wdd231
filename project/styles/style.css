@@ -1777,6 +1777,20 @@ textarea.input-field {
         background-image: url('images/footer-illustration.png');
     }
 
+    .logo-wrapper {
+        /* No special styling needed, just declaring it exists */
+    }
+
+    .footer-brand {
+        /* This may already have styles, just verify it exists */
+    }
+    .footer-list-item {
+        /* This may already have styles, just verify it exists */
+    }
+    .fcopyright-text {
+        /* This may already have styles, just verify it exists */
+    }
+
   /**
    * FOOTER
    */
