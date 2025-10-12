@@ -1,9 +1,100 @@
-// Blog JavaScript with JSON data loading
+// Blog JavaScript with JSON data loading and Lazy Loading
 
 let allPosts = [];
 let currentFilter = 'all';
 let currentPage = 1;
 const postsPerPage = 6;
+
+// Lazy Load Observer
+let lazyLoadObserver;
+
+// Initialize Lazy Loading
+function initLazyLoading() {
+    if ('IntersectionObserver' in window) {
+        lazyLoadObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    loadImage(img);
+                    lazyLoadObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px', // Start loading 50px before image enters viewport
+            threshold: 0.1
+        });
+    }
+}
+
+// Load image function
+function loadImage(img) {
+    const src = img.getAttribute('data-src');
+    if (!src) return;
+
+    const placeholder = img.parentElement.querySelector('.lazyload-placeholder');
+
+    const imageLoader = new Image();
+    imageLoader.src = src;
+
+    imageLoader.onload = () => {
+        img.src = src;
+        img.classList.remove('lazyload');
+        img.classList.add('lazyloaded', 'fade-in');
+
+        if (placeholder) {
+            placeholder.style.display = 'none';
+        }
+
+        // Remove data-src attribute after loading
+        img.removeAttribute('data-src');
+    };
+
+    imageLoader.onerror = () => {
+        console.error('Error loading image:', src);
+        img.src = 'images/placeholder-image.jpg'; // Fallback image
+        img.classList.add('lazyloaded', 'fade-in');
+
+        if (placeholder) {
+            placeholder.style.display = 'none';
+        }
+    };
+}
+
+// Fallback for browsers without IntersectionObserver
+function lazyLoadFallback() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    lazyImages.forEach(img => {
+        if (isInViewport(img)) {
+            loadImage(img);
+        }
+    });
+}
+
+// Check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+// Setup lazy loading for images
+function setupLazyLoading() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    if (lazyLoadObserver) {
+        lazyImages.forEach(img => {
+            lazyLoadObserver.observe(img);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyLoadFallback();
+        window.addEventListener('scroll', lazyLoadFallback);
+        window.addEventListener('resize', lazyLoadFallback);
+    }
+}
 
 // Load blog data from JSON
 async function loadBlogData() {
@@ -47,11 +138,16 @@ function displayPosts() {
         blogList.appendChild(postCard);
     });
 
+    // Setup lazy loading for new images
+    setTimeout(() => {
+        setupLazyLoading();
+    }, 100);
+
     // Setup pagination
     setupPagination(filteredPosts.length);
 }
 
-// Create post card element
+// Create post card element with lazy loading
 function createPostCard(post, index) {
     const li = document.createElement('li');
     li.style.animationDelay = `${index * 0.1}s`;
@@ -68,8 +164,9 @@ function createPostCard(post, index) {
     li.innerHTML = `
         <div class="blog-card">
             <div class="card-banner">
-                <img src="${post.image}" width="600" height="390" loading="lazy"
-                    alt="${post.title}" class="w-100">
+                <div class="lazyload-placeholder"></div>
+                <img data-src="${post.image}" width="600" height="390" 
+                    alt="${post.title}" class="w-100 lazyload">
                 <div class="badge">${post.category}</div>
             </div>
             <div class="card-content">
@@ -224,6 +321,7 @@ function setupHeaderScroll() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initLazyLoading();
     loadBlogData();
     setupFilters();
     setupMobileMenu();
@@ -243,4 +341,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Cleanup lazy loading on page unload
+window.addEventListener('beforeunload', () => {
+    if (lazyLoadObserver) {
+        lazyLoadObserver.disconnect();
+    }
 });
