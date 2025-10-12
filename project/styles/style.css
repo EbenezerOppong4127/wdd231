@@ -1,8 +1,8 @@
-/*-----------------------------------*\
+/*!*-----------------------------------*\
   #OPTIMIZED style.css - EXACTLY 75 CLASSES
-\*-----------------------------------*/
+\*-----------------------------------*!
 
-/* CSS Variables - NOT COUNTED */
+!* CSS Variables - NOT COUNTED *!
 :root {
     --rich-black-fogra-29: hsl(210, 26%, 7%);
     --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
@@ -41,7 +41,7 @@
     --transition-2: 0.5s ease;
 }
 
-/* Base Reset - Element selectors NOT COUNTED */
+!* Base Reset - Element selectors NOT COUNTED *!
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -106,7 +106,7 @@ ion-icon {
     color: var(--white);
 }
 
-:focus-visible { outline-offset: 4px; }
+:focus-visible { outline-offset: 4px; }*/
 
 /* === 75 CLASSES START HERE === */
 
