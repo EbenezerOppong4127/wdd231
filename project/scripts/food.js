@@ -189,7 +189,7 @@
     // STEP 10.4: Render the food items after data is loaded
     renderFoodItems();
 
-    console.log('Food data loaded successfully:', foodData);
+
 
 } catch (error) {
     // STEP 10.5: Handle errors (file not found, network issues, etc.)
