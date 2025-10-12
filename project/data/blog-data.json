@@ -1,0 +1,166 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "The Perfect Neapolitan Pizza Recipe",
+      "excerpt": "Learn how to make authentic Neapolitan pizza with simple ingredients and traditional techniques that will transport you to Italy.",
+      "category": "pizza",
+      "date": "2024-01-15",
+      "author": "Marco Rossi",
+      "image": "images/blog-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Gourmet Burger Masterclass",
+      "excerpt": "Discover the secrets to creating the ultimate gourmet burger with premium ingredients and unique flavor combinations.",
+      "category": "burger",
+      "date": "2024-01-12",
+      "author": "Sarah Johnson",
+      "image": "images/blog-1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Crispy Fried Chicken Secrets",
+      "excerpt": "Get the perfect crispy coating and juicy interior with our professional fried chicken techniques and secret spice blend.",
+      "category": "chicken",
+      "date": "2024-01-10",
+      "author": "Chef Williams",
+      "image": "images/blog-1.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Homemade Pasta from Scratch",
+      "excerpt": "Master the art of making fresh pasta at home with our step-by-step guide to different shapes and sauces.",
+      "category": "pasta",
+      "date": "2024-01-08",
+      "author": "Maria Conti",
+      "image": "images/blog-1.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Wood-Fired Pizza Oven Techniques",
+      "excerpt": "Learn how to get the perfect char and flavor using wood-fired ovens for authentic artisanal pizza.",
+      "category": "pizza",
+      "date": "2024-01-05",
+      "author": "Tony Bianchi",
+      "image": "images/blog-2.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Beyond Beef: Alternative Burger Patties",
+      "excerpt": "Explore delicious plant-based and alternative protein options for your next burger creation.",
+      "category": "burger",
+      "date": "2024-01-03",
+      "author": "Lisa Chen",
+      "image": "images/blog-2.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Healthy Chicken Meal Prep Ideas",
+      "excerpt": "Transform your weekly meal prep with these healthy, flavorful chicken recipes that stay fresh all week.",
+      "category": "chicken",
+      "date": "2024-01-01",
+      "author": "Dr. Emily Stone",
+      "image": "images/blog-2.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Regional Pasta Dishes of Italy",
+      "excerpt": "Travel through Italy's regions through their most famous pasta dishes and traditional recipes.",
+      "category": "pasta",
+      "date": "2023-12-28",
+      "author": "Giovanni Romano",
+      "image": "images/blog-2.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Detroit-Style Pizza Revolution",
+      "excerpt": "Discover the rectangular, crispy-crusted pizza style taking the culinary world by storm.",
+      "category": "pizza",
+      "date": "2023-12-25",
+      "author": "Mike Detroit",
+      "image": "images/blog-3.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Build Your Ultimate Burger Bar",
+      "excerpt": "Create the perfect burger bar for parties with our guide to toppings, sauces, and presentation.",
+      "category": "burger",
+      "date": "2023-12-22",
+      "author": "Party Planner Pro",
+      "image": "images/blog-3.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Global Chicken Curry Variations",
+      "excerpt": "Explore how different cultures create their unique versions of chicken curry from around the world.",
+      "category": "chicken",
+      "date": "2023-12-20",
+      "author": "World Food Explorer",
+      "image": "images/blog-3.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Pasta Shapes and Their Perfect Sauces",
+      "excerpt": "Learn which pasta shapes pair best with different sauce types for the ultimate dining experience.",
+      "category": "pasta",
+      "date": "2023-12-18",
+      "author": "Pasta Professor",
+      "image": "images/blog-3.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Gluten-Free Pizza Crust Options",
+      "excerpt": "Delicious gluten-free pizza crust recipes that don't compromise on taste or texture.",
+      "category": "pizza",
+      "date": "2023-12-15",
+      "author": "Gluten-Free Guru",
+      "image": "images/blog-4.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Breakfast Burger Innovations",
+      "excerpt": "Start your day right with these creative breakfast burger recipes combining morning favorites.",
+      "category": "burger",
+      "date": "2023-12-12",
+      "author": "Breakfast Expert",
+      "image": "images/blog-4.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Roast Chicken Perfection",
+      "excerpt": "Achieve the perfect golden-brown roast chicken with crispy skin and moist, flavorful meat every time.",
+      "category": "chicken",
+      "date": "2023-12-10",
+      "author": "Sunday Dinner Master",
+      "image": "images/blog-4.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Fresh vs. Dry Pasta: The Great Debate",
+      "excerpt": "Understand the differences between fresh and dry pasta and when to use each for optimal results.",
+      "category": "pasta",
+      "date": "2023-12-08",
+      "author": "Pasta Connoisseur",
+      "image": "images/blog-4.jpg"
+    },
+    {
+      "id": 17,
+      "title": "New York vs. Chicago Pizza Styles",
+      "excerpt": "A deep dive into the characteristics and cultural significance of America's two most famous pizza styles.",
+      "category": "pizza",
+      "date": "2023-12-05",
+      "author": "Pizza Historian",
+      "image": "images/blog-5.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Vegetarian Burger Revolution",
+      "excerpt": "Innovative plant-based burger recipes that will satisfy even the most dedicated meat lovers.",
+      "category": "burger",
+      "date": "2023-12-03",
+      "author": "Green Chef",
+      "image": "images/blog-5.jpg"
+    }
+  ]
+}
