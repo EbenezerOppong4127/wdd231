@@ -1,8 +1,8 @@
 /*-----------------------------------*\
-  #OPTIMIZED style.css
+  #OPTIMIZED style.css - FIXED VERSION
 \*-----------------------------------*/
 
-/* STEP 1: Keep CSS Variables - These are used throughout */
+/* STEP 1: CSS Variables */
 :root {
     --rich-black-fogra-29: hsl(210, 26%, 7%);
     --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
@@ -50,7 +50,7 @@
     --clip-path-2: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
 }
 
-/* STEP 2: Base Reset - Consolidated */
+/* STEP 2: Base Reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@ body {
 
 body.active { overflow: hidden; }
 
-/* STEP 3: Common Element Styles - Grouped by element type */
+/* STEP 3: Common Elements */
 a {
     text-decoration: none;
     color: inherit;
@@ -108,7 +108,7 @@ ion-icon {
     pointer-events: none;
 }
 
-/* STEP 4: Scrollbar Styles - Consolidated */
+/* STEP 4: Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background-color: var(--cultured); }
 ::-webkit-scrollbar-thumb { background-color: var(--deep-saffron); }
@@ -121,35 +121,12 @@ ion-icon {
 
 :focus-visible { outline-offset: 4px; }
 
-/* STEP 5: Typography - Reusable heading class */
-.heading {
-    font-family: var(--ff-rubik);
-    color: var(--rich-black-fogra-29);
-    line-height: 1.2;
-    letter-spacing: -1px;
-    font-weight: var(--fw-600);
-}
-
-.h1, .h2 {
-    font-size: var(--fs-1);
-    font-family: var(--ff-rubik);
-    color: var(--rich-black-fogra-29);
-    line-height: 1.2;
-    letter-spacing: -1px;
-    font-weight: var(--fw-600);
-}
-
-.h3 {
-    font-size: var(--fs-2);
-    font-family: var(--ff-rubik);
-    color: var(--rich-black-fogra-29);
-    line-height: 1.2;
-    letter-spacing: -1px;
-    font-weight: var(--fw-600);
-}
-
+/* STEP 5: Reusable Typography Classes */
+.heading,
+.h1,
+.h2,
+.h3,
 .h4 {
-    font-size: var(--fs-3);
     font-family: var(--ff-rubik);
     color: var(--rich-black-fogra-29);
     line-height: 1.2;
@@ -157,8 +134,14 @@ ion-icon {
     font-weight: var(--fw-600);
 }
 
-/* STEP 6: Button Styles - Single consolidated class */
-.btn {
+.h1 { font-size: var(--fs-1); }
+.h2 { font-size: var(--fs-1); }
+.h3 { font-size: var(--fs-2); }
+.h4 { font-size: var(--fs-3); }
+
+/* STEP 6: Button Styles */
+.btn,
+.btn-hover {
     background-color: var(--deep-saffron);
     color: var(--white);
     font-family: var(--ff-rubik);
@@ -173,7 +156,8 @@ ion-icon {
     display: inline-block;
 }
 
-.btn::after {
+.btn::after,
+.btn-hover::after {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -187,11 +171,12 @@ ion-icon {
     transition: var(--transition-2);
 }
 
-.btn:is(:hover, :focus)::after {
+.btn:is(:hover, :focus)::after,
+.btn-hover:is(:hover, :focus)::after {
     transform: translate(-50%, 51%) scale(500);
 }
 
-/* STEP 7: Layout Classes - Reusable */
+/* STEP 7: Layout Classes */
 .container {
     padding-inline: 15px;
     max-width: 100%;
@@ -216,7 +201,7 @@ ion-icon {
     border-width: 0;
 }
 
-/* STEP 8: Header Styles */
+/* STEP 8: Header */
 .header {
     position: absolute;
     top: 0;
@@ -244,6 +229,11 @@ ion-icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* FIX 1: Added logo-wrapper class */
+.logo-wrapper {
+    display: inline-block;
 }
 
 .logo {
@@ -439,6 +429,15 @@ ion-icon {
 
 .hero-banner { display: none; }
 
+/* FIX 2: Added hero-img-bg class */
+.hero-img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
 /* STEP 12: Footer */
 .footer { overflow: hidden; }
 
@@ -472,6 +471,11 @@ ion-icon {
 .footer-top .container {
     display: grid;
     gap: 30px;
+}
+
+/* FIX 3: Added footer-brand class */
+.footer-brand {
+    display: block;
 }
 
 .footer .logo {
@@ -523,6 +527,13 @@ ion-icon {
 }
 
 .footer-list > li:not(:last-child) { margin-block-end: 15px; }
+
+/* FIX 4: Added footer-list-item class */
+.footer-list-item {
+    color: var(--sonic-silver);
+    font-size: var(--fs-4);
+}
+
 .footer-list address { max-width: 20ch; }
 
 .footer-form {
@@ -571,7 +582,7 @@ textarea.input-field {
     text-align: center;
 }
 
-/* STEP 13: Back to Top Button */
+/* STEP 13: Back to Top */
 .back-top-btn {
     position: fixed;
     bottom: 10px;
@@ -597,7 +608,7 @@ textarea.input-field {
     background-color: var(--rich-black-fogra-29);
 }
 
-/* STEP 14: Media Queries - Consolidated */
+/* STEP 14: Media Queries */
 @media (min-width: 480px) {
     .header-btn-group .btn {
         display: block;
