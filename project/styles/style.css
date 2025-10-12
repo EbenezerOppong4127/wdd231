@@ -1,8 +1,8 @@
 /*-----------------------------------*\
-  #OPTIMIZED style.css - 75 CLASSES MAXIMUM
+  #OPTIMIZED style.css - FIXED VERSION
 \*-----------------------------------*/
 
-/* STEP 1: CSS Variables (NOT counted as classes) */
+/* STEP 1: CSS Variables */
 :root {
     --rich-black-fogra-29: hsl(210, 26%, 7%);
     --champagne-pink_20: hsla(23, 61%, 86%, 0.2);
@@ -23,25 +23,34 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --onyx: hsl(0, 0%, 27%);
+
     --ff-shadows-into-light: 'Shadows Into Light', cursive;
     --ff-roboto: 'Roboto', sans-serif;
     --ff-rubik: 'Rubik', sans-serif;
+
     --fs-1: 3.2rem;
     --fs-2: 2.2rem;
     --fs-3: 1.8rem;
     --fs-4: 1.4rem;
     --fs-5: 1.2rem;
+
     --fw-500: 500;
     --fw-600: 600;
     --fw-700: 700;
+
     --section-padding: 60px;
+
     --shadow-1: 0 1px 4px hsla(0, 0%, 0%, 0.2);
     --shadow-2: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease;
+
+    --clip-path-1: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+    --clip-path-2: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
 }
 
-/* STEP 2: Base Reset - Element selectors (NOT counted) */
+/* STEP 2: Base Reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -62,6 +71,9 @@ body {
     overflow-x: hidden;
 }
 
+body.active { overflow: hidden; }
+
+/* STEP 3: Common Elements */
 a {
     text-decoration: none;
     color: inherit;
@@ -96,6 +108,7 @@ ion-icon {
     pointer-events: none;
 }
 
+/* STEP 4: Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background-color: var(--cultured); }
 ::-webkit-scrollbar-thumb { background-color: var(--deep-saffron); }
@@ -108,13 +121,12 @@ ion-icon {
 
 :focus-visible { outline-offset: 4px; }
 
-/* CLASS COUNT STARTS HERE */
-
-/* 1. body.active */
-body.active { overflow: hidden; }
-
-/* 2-6. Typography - MERGED */
-.h1, .h2, .h3, .h4, .heading {
+/* STEP 5: Reusable Typography Classes */
+.heading,
+.h1,
+.h2,
+.h3,
+.h4 {
     font-family: var(--ff-rubik);
     color: var(--rich-black-fogra-29);
     line-height: 1.2;
@@ -122,20 +134,14 @@ body.active { overflow: hidden; }
     font-weight: var(--fw-600);
 }
 
-/* 7. h1 */
 .h1 { font-size: var(--fs-1); }
-
-/* 8. h2 */
 .h2 { font-size: var(--fs-1); }
-
-/* 9. h3 */
 .h3 { font-size: var(--fs-2); }
-
-/* 10. h4 */
 .h4 { font-size: var(--fs-3); }
 
-/* 11-12. Buttons - MERGED */
-.btn, .btn-hover {
+/* STEP 6: Button Styles */
+.btn,
+.btn-hover {
     background-color: var(--deep-saffron);
     color: var(--white);
     font-family: var(--ff-rubik);
@@ -150,8 +156,8 @@ body.active { overflow: hidden; }
     display: inline-block;
 }
 
-/* 13. btn::after */
-.btn::after, .btn-hover::after {
+.btn::after,
+.btn-hover::after {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -165,27 +171,24 @@ body.active { overflow: hidden; }
     transition: var(--transition-2);
 }
 
-/* 14. btn:hover */
-.btn:is(:hover, :focus)::after, .btn-hover:is(:hover, :focus)::after {
+.btn:is(:hover, :focus)::after,
+.btn-hover:is(:hover, :focus)::after {
     transform: translate(-50%, 51%) scale(500);
 }
 
-/* 15. container */
+/* STEP 7: Layout Classes */
 .container {
     padding-inline: 15px;
     max-width: 100%;
     margin-inline: auto;
 }
 
-/* 16. section */
 .section {
     padding-block: var(--section-padding);
 }
 
-/* 17. w-100 */
 .w-100 { width: 100%; }
 
-/* 18. visually-hidden */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -198,7 +201,7 @@ body.active { overflow: hidden; }
     border-width: 0;
 }
 
-/* 19. header */
+/* STEP 8: Header */
 .header {
     position: absolute;
     top: 0;
@@ -209,7 +212,6 @@ body.active { overflow: hidden; }
     z-index: 4;
 }
 
-/* 20. header.active */
 .header.active {
     position: fixed;
     top: -86px;
@@ -218,19 +220,22 @@ body.active { overflow: hidden; }
     animation: slideIn 0.5s ease-out forwards;
 }
 
-/* 21. header .container */
+@keyframes slideIn {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* 22. logo-wrapper */
+/* FIX 1: Added logo-wrapper class */
 .logo-wrapper {
     display: inline-block;
 }
 
-/* 23. logo */
 .logo {
     color: var(--white);
     font-family: var(--ff-rubik);
@@ -239,38 +244,31 @@ body.active { overflow: hidden; }
     letter-spacing: -2px;
 }
 
-/* 24. header.active .logo */
 .header.active .logo { color: var(--rich-black-fogra-29); }
 
-/* 25. logo .span */
 .logo .span {
     display: inline-block;
     color: var(--deep-saffron);
 }
 
-/* 26. header-btn-group */
 .header-btn-group {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* 27. search-btn */
 .search-btn {
     color: var(--champagne-pink);
     font-size: 20px;
 }
 
-/* 28. header.active .search-btn */
 .header.active .search-btn { color: var(--rich-black-fogra-29); }
 
-/* 29. nav-toggle-btn */
 .nav-toggle-btn {
     display: grid;
     gap: 4px;
 }
 
-/* 30. line */
 .line {
     width: 10px;
     height: 3px;
@@ -279,25 +277,16 @@ body.active { overflow: hidden; }
     transition: var(--transition-1);
 }
 
-/* 31. header.active .line */
 .header.active .line { background-color: var(--rich-black-fogra-29); }
 
-/* 32. line.middle */
 .line.middle { width: 20px; }
-
-/* 33. line.bottom */
 .line.bottom { margin-left: auto; }
 
-/* 34. nav-toggle-btn.active .line.top */
 .nav-toggle-btn.active .line.top { transform: translate(1px, 3px) rotate(45deg); }
-
-/* 35. nav-toggle-btn.active .line.middle */
 .nav-toggle-btn.active .line.middle { transform: rotate(-45deg); }
-
-/* 36. nav-toggle-btn.active .line.bottom */
 .nav-toggle-btn.active .line.bottom { transform: translate(-1px, -3px) rotate(45deg); }
 
-/* 37. navbar */
+/* STEP 9: Navigation */
 .navbar {
     position: absolute;
     top: 100%;
@@ -313,21 +302,17 @@ body.active { overflow: hidden; }
     transition: var(--transition-1);
 }
 
-/* 38. navbar.active */
 .navbar.active {
     height: 236px;
     visibility: visible;
 }
 
-/* 39. navbar-list */
 .navbar-list { margin-block: 10px; }
 
-/* 40. nav-item:not(:last-child) */
 .nav-item:not(:last-child) {
     border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
 }
 
-/* 41. navbar-link */
 .navbar-link {
     color: var(--rich-black-fogra-29);
     font-size: var(--fs-4);
@@ -338,10 +323,9 @@ body.active { overflow: hidden; }
     display: block;
 }
 
-/* 42. navbar-link:hover */
 .navbar-link:is(:hover, :focus) { color: var(--dark-orange); }
 
-/* 43. search-container */
+/* STEP 10: Search Container */
 .search-container {
     position: fixed;
     top: -60%;
@@ -359,21 +343,18 @@ body.active { overflow: hidden; }
     transition: var(--transition-2);
 }
 
-/* 44. search-container.active */
 .search-container.active {
     visibility: visible;
     opacity: 1;
     transform: translateY(50%);
 }
 
-/* 45. search-box */
 .search-box {
     position: relative;
     width: 100%;
     max-width: 500px;
 }
 
-/* 46. search-input */
 .search-input {
     color: var(--gainsboro);
     font-size: 3rem;
@@ -381,13 +362,9 @@ body.active { overflow: hidden; }
     padding-inline-end: 70px;
 }
 
-/* 47. search-input::placeholder */
 .search-input::placeholder { color: var(--spanish-gray); }
-
-/* 48. search-input::-webkit-search-cancel-button */
 .search-input::-webkit-search-cancel-button { display: none; }
 
-/* 49. search-submit */
 .search-submit {
     position: absolute;
     top: 50%;
@@ -398,10 +375,8 @@ body.active { overflow: hidden; }
     transition: var(--transition-1);
 }
 
-/* 50. search-submit:hover */
 .search-submit:is(:hover, :focus) { color: var(--gainsboro); }
 
-/* 51. search-close-btn */
 .search-close-btn {
     position: absolute;
     inset: 0;
@@ -409,7 +384,7 @@ body.active { overflow: hidden; }
     cursor: url("../images/close.png"), auto;
 }
 
-/* 52. hero */
+/* STEP 11: Hero Section */
 .hero {
     background-repeat: no-repeat;
     background-size: cover;
@@ -418,12 +393,10 @@ body.active { overflow: hidden; }
     text-align: center;
 }
 
-/* 53. hero-background-article */
 .hero-background-article {
     background-image: url('images/hero-bg.jpg');
 }
 
-/* 54. hero-subtitle */
 .hero-subtitle {
     color: var(--dark-orange);
     font-family: var(--ff-shadows-into-light);
@@ -432,14 +405,12 @@ body.active { overflow: hidden; }
     margin-block-end: 25px;
 }
 
-/* 55. hero-title */
 .hero-title {
     color: var(--champagne-pink);
     max-width: 12ch;
     margin-inline: auto;
 }
 
-/* 56. hero-text */
 .hero-text {
     color: var(--desert-sand);
     margin-block: 15px 30px;
@@ -447,21 +418,18 @@ body.active { overflow: hidden; }
     margin-inline: auto;
 }
 
-/* 57. hero .btn */
 .hero .btn {
     margin-inline: auto;
 }
 
-/* 58. hero .btn:hover */
 .hero .btn:is(:hover, :focus) {
     background-color: var(--white);
     color: var(--black);
 }
 
-/* 59. hero-banner */
 .hero-banner { display: none; }
 
-/* 60. hero-img-bg */
+/* FIX 2: Added hero-img-bg class */
 .hero-img-bg {
     position: absolute;
     top: 0;
@@ -470,10 +438,9 @@ body.active { overflow: hidden; }
     opacity: 0.3;
 }
 
-/* 61. footer */
+/* STEP 12: Footer */
 .footer { overflow: hidden; }
 
-/* 62. footer-top */
 .footer-top {
     position: relative;
     padding-block: 120px;
@@ -483,12 +450,10 @@ body.active { overflow: hidden; }
     border-block-end: 2px solid var(--independence_30);
 }
 
-/* 63. hero-background-footer */
 .hero-background-footer {
     background-image: url('images/footer-illustration.png');
 }
 
-/* 64. footer-top::after */
 .footer-top::after {
     content: url(../images/delivery-boy.svg);
     position: absolute;
@@ -498,33 +463,33 @@ body.active { overflow: hidden; }
     animation: running-cycle 20s linear infinite;
 }
 
-/* 65. footer-top .container */
+@keyframes running-cycle {
+    0% { left: -160px; }
+    100% { left: 100%; }
+}
+
 .footer-top .container {
     display: grid;
     gap: 30px;
 }
 
-/* 66. footer-brand */
+/* FIX 3: Added footer-brand class */
 .footer-brand {
     display: block;
 }
 
-/* 67. footer .logo */
 .footer .logo {
     color: var(--rich-black-fogra-29);
     font-size: 3.2rem;
 }
 
-/* 68. footer-text */
 .footer-text { margin-block: 15px 25px; }
 
-/* 69. social-list */
 .social-list {
     display: flex;
     gap: 5px;
 }
 
-/* 70. social-link */
 .social-link {
     background-color: var(--dark-orange);
     color: var(--white);
@@ -533,12 +498,10 @@ body.active { overflow: hidden; }
     transition: var(--transition-1);
 }
 
-/* 71. social-link:hover */
 .social-link:is(:hover, :focus) {
     background-color: var(--rich-black-fogra-29);
 }
 
-/* 72. footer-list-title */
 .footer-list-title {
     position: relative;
     max-width: max-content;
@@ -550,7 +513,6 @@ body.active { overflow: hidden; }
     margin-block-end: 20px;
 }
 
-/* 73. footer-list-title::after */
 .footer-list-title::after {
     content: "";
     position: absolute;
@@ -564,55 +526,119 @@ body.active { overflow: hidden; }
     box-shadow: inset -5px 0 0 var(--white);
 }
 
-/* 74. footer-list > li:not(:last-child) */
 .footer-list > li:not(:last-child) { margin-block-end: 15px; }
 
-/* 75. footer-list-item */
+/* FIX 4: Added footer-list-item class */
 .footer-list-item {
     color: var(--sonic-silver);
     font-size: var(--fs-4);
 }
 
-/* REMOVED: footer-list address - Using parent selector instead */
-/* REMOVED: footer-form - Inline styles or combined */
-/* REMOVED: input-wrapper - Inline styles */
-/* REMOVED: input-field - Using element selectors */
-/* REMOVED: textarea.input-field - Using element selectors */
-/* REMOVED: footer-form .btn - Using .btn directly */
-/* REMOVED: footer-bottom - Inline styles */
-/* REMOVED: back-top-btn - Using inline styles or JS */
+.footer-list address { max-width: 20ch; }
 
-/* Keyframes (NOT counted as classes) */
-@keyframes slideIn {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100%); }
+.footer-form {
+    background-color: var(--white);
+    padding: 30px;
+    border: 1px solid var(--cultured);
+    box-shadow: var(--shadow-2);
 }
 
-@keyframes running-cycle {
-    0% { left: -160px; }
-    100% { left: 100%; }
+.input-wrapper {
+    display: grid;
+    gap: 10px;
+    margin-block-end: 10px;
 }
 
-/* Media Queries - Combined and optimized */
+.input-field {
+    color: var(--spanish-gray);
+    font-size: var(--fs-4);
+    border: 1px solid var(--cultured);
+    padding: 8px 12px;
+}
+
+.input-field::placeholder { color: var(--spanish-gray); }
+.input-field::-webkit-calendar-picker-indicator { opacity: 0.5; }
+
+textarea.input-field {
+    min-height: 50px;
+    max-height: 150px;
+    height: 100px;
+    resize: vertical;
+    margin-block-end: 10px;
+}
+
+.footer-form .btn {
+    font-size: var(--fs-4);
+    height: 40px;
+    padding-inline: 25px;
+}
+
+.footer-form .btn:is(:hover, :focus) {
+    background-color: var(--rich-black-fogra-29);
+}
+
+.footer-bottom {
+    padding-block: 20px;
+    text-align: center;
+}
+
+/* STEP 13: Back to Top */
+.back-top-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-1);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-1);
+}
+
+.back-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
+}
+
+.back-top-btn:is(:hover, :focus) {
+    background-color: var(--rich-black-fogra-29);
+}
+
+/* STEP 14: Media Queries */
 @media (min-width: 480px) {
-    .header-btn-group .btn { display: block; }
+    .header-btn-group .btn {
+        display: block;
+    }
 }
 
 @media (min-width: 550px) {
-    .container { max-width: 550px; }
+    .container {
+        max-width: 550px;
+    }
+
     .hero-title { font-size: 4.2rem; }
-    .footer-top .container { grid-template-columns: 1fr 1fr; }
+
+    .footer-top .container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 768px) {
     .container { max-width: 720px; }
+
     .hero {
         position: relative;
         text-align: left;
         overflow: hidden;
         z-index: 1;
     }
+
     .hero-content > * { margin-inline: 0; }
+
     .hero-banner {
         display: block;
         position: absolute;
@@ -622,10 +648,12 @@ body.active { overflow: hidden; }
         max-width: 40%;
         aspect-ratio: 1 / 0.9;
     }
+
     .hero-img {
         position: absolute;
         bottom: 0;
     }
+
     .hero::after {
         content: "";
         position: absolute;
@@ -640,52 +668,93 @@ body.active { overflow: hidden; }
         pointer-events: none;
         z-index: -1;
     }
+
+    .input-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 992px) {
-    :root { --section-padding: 120px; }
+    :root {
+        --section-padding: 120px;
+    }
+
     .container { max-width: 960px; }
+
     .h2 { font-size: 4.2rem; }
+
     .nav-toggle-btn { display: none; }
+
     .header .container { gap: 20px; }
-    .navbar, .navbar.active {
+
+    .navbar,
+    .navbar.active {
         all: unset;
         margin-inline-start: auto;
     }
+
     .navbar-list {
         margin-block: 0;
         display: flex;
         gap: 5px;
     }
-    .nav-item:not(:last-child) { border-block-end: none; }
+
+    .nav-item:not(:last-child) {
+        border-block-end: none;
+    }
+
     .navbar-link {
         font-size: 1.5rem;
         color: var(--champagne-pink);
         letter-spacing: -0.5px;
     }
-    .header.active .navbar-link { color: var(--rich-black-fogra-29); }
+
+    .header.active .navbar-link {
+        color: var(--rich-black-fogra-29);
+    }
+
     .hero {
         min-height: 660px;
         display: grid;
         align-items: center;
     }
+
     .hero-subtitle { font-size: 3.2rem; }
+
     .hero-title {
         font-size: 7rem;
         letter-spacing: -2.5px;
     }
+
     .hero-text { font-size: var(--fs-3); }
+
     .hero-banner {
         max-width: 45%;
         top: auto;
         bottom: 0;
         transform: translateY(0);
     }
-    .footer-top .container { grid-template-columns: 1fr 1fr 1fr 1.6fr; }
+
+    .footer-top .container {
+        grid-template-columns: 1fr 1fr 1fr 1.6fr;
+    }
+
+    .footer-form {
+        margin-block-start: -170px;
+    }
+
+    .back-top-btn {
+        bottom: 20px;
+        right: 30px;
+    }
 }
 
 @media (min-width: 1200px) {
     .container { max-width: 1200px; }
+
     .hero { min-height: 770px; }
-    .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
+
+    .footer-top .container {
+        grid-template-columns: 1.4fr 1fr 1fr 1.6fr;
+    }
 }
