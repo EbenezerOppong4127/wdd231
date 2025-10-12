@@ -1,27 +1,92 @@
+// Contact Form Handling with Local Storage and Success Page Redirect
+const form = document.getElementById('contactForm');
 
-    // STEP 1: Select the form element from the page
-    const form = document.getElementById('contactForm');
-
-    // STEP 2: Add an event listener that runs when form is submitted
-    form.addEventListener('submit', function(e) {
-    // STEP 3: Prevent the page from refreshing (default behavior)
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // STEP 4: Get all the values user entered in the form
+    // Get all the values user entered in the form
     const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    subject: document.getElementById('subject').value,
-    message: document.getElementById('message').value
-};
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value.trim(),
+        timestamp: new Date().toISOString(),
+        id: Date.now() // Unique ID for each submission
+    };
 
-    // STEP 5: Show what was submitted (in real app, this would send to server)
-    console.log('Form submitted with data:', formData);
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+        alert('Please fill in all required fields.');
+        return;
+    }
 
-    // STEP 6: Show success message to user
-    alert('Thank you for your message! We will get back to you soon.');
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
 
-    // STEP 7: Clear the form fields
+    // Save form data to localStorage
+    saveFormData(formData);
+
+    // Clear the form fields
     form.reset();
+
+    // Redirect to success page
+    window.location.href = 'success.html';
+});
+
+// Function to save form data to localStorage
+function saveFormData(formData) {
+    try {
+        // Get existing submissions or initialize empty array
+        const existingSubmissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+
+        // Add new submission
+        existingSubmissions.push(formData);
+
+        // Keep only last 50 submissions to prevent localStorage from getting too large
+        const recentSubmissions = existingSubmissions.slice(-50);
+
+        // Save back to localStorage
+        localStorage.setItem('contactSubmissions', JSON.stringify(recentSubmissions));
+
+
+    } catch (error) {
+
+        localStorage.setItem('lastContactSubmission', JSON.stringify(formData));
+    }
+}
+
+// Optional: Form validation on input
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+
+    // Real-time email validation
+    emailInput.addEventListener('blur', function() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (this.value && !emailRegex.test(this.value)) {
+            this.style.borderColor = 'var(--cinnabar)';
+        } else {
+            this.style.borderColor = '';
+        }
+    });
+
+    // Phone number formatting (optional)
+    phoneInput.addEventListener('input', function() {
+        let value = this.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            value = '+1 (' + value;
+            if (value.length > 7) {
+                value = value.slice(0, 7) + ') ' + value.slice(7);
+            }
+            if (value.length > 12) {
+                value = value.slice(0, 12) + '-' + value.slice(12, 16);
+            }
+        }
+        this.value = value;
+    });
 });

@@ -1,0 +1,175 @@
+
+.success-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('images/hero-bg.jpg') center/cover;
+    padding: 120px 0 80px;
+    text-align: center;
+    color: var(--white);
+}
+
+.success-hero h1 {
+    color: var(--white);
+    font-size: var(--fs-1);
+    margin-bottom: 20px;
+}
+
+.success-hero p {
+    color: var(--champagne-pink);
+    font-size: var(--fs-3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--isabelline);
+}
+
+.success-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.success-icon {
+    font-size: 80px;
+    color: var(--deep-saffron);
+    margin-bottom: 30px;
+}
+
+.success-message h2 {
+    color: var(--rich-black-fogra-29);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.success-message p {
+    color: var(--sonic-silver);
+    font-size: var(--fs-3);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.success-details {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-1);
+    margin: 30px 0;
+    text-align: left;
+}
+
+.success-details h3 {
+    color: var(--rich-black-fogra-29);
+    margin-bottom: 20px;
+    font-size: var(--fs-2);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gainsboro);
+}
+
+.detail-label {
+    font-weight: var(--fw-600);
+    color: var(--rich-black-fogra-29);
+    min-width: 120px;
+}
+
+.detail-value {
+    color: var(--sonic-silver);
+    flex: 1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-500);
+    transition: var(--transition-1);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-orange);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--rich-black-fogra-29);
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: var(--ff-rubik);
+    font-weight: var(--fw-500);
+    border: 2px solid var(--deep-saffron);
+    transition: var(--transition-1);
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--deep-saffron);
+    color: var(--white);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-content {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .success-hero {
+        padding: 100px 0 60px;
+    }
+
+    .success-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 200px;
+        text-align: center;
+    }
+
+    .detail-item {
+        flex-direction: column;
+    }
+
+    .detail-label {
+        margin-bottom: 5px;
+    }
+}

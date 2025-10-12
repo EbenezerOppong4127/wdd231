@@ -192,8 +192,7 @@
 
 
 } catch (error) {
-    // STEP 10.5: Handle errors (file not found, network issues, etc.)
-    console.error('Error loading food data:', error);
+
 
     // Show error message to user
     foodMenuList.innerHTML = `
