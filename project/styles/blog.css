@@ -5,7 +5,7 @@
 /* Blog Hero Section */
 .hero-blog {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../images/blog-hero-bg.jpg') center/cover;
+    url('../images/hero-bg.jpg') center/cover;
     padding-block: 120px 80px;
     text-align: center;
     color: var(--white);
