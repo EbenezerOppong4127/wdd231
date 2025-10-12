@@ -494,8 +494,9 @@ ion-icon {
 /* REMOVED: .back-top-btn - use inline styles */
 /* REMOVED: .back-top-btn.active - use JavaScript */
 /* REMOVED: .back-top-btn:hover - use inline styles */
+/*
 
-/* Keyframes - NOT COUNTED */
+!* Keyframes - NOT COUNTED *!
 @keyframes slideIn {
     0% { transform: translateY(0); }
     100% { transform: translateY(100%); }
@@ -506,7 +507,7 @@ ion-icon {
     100% { left: 100%; }
 }
 
-/* Media Queries - Selectors inside NOT COUNTED as new classes */
+!* Media Queries - Selectors inside NOT COUNTED as new classes *!
 @media (min-width: 480px) {
     .header-btn-group .btn { display: block; }
 }
@@ -601,4 +602,4 @@ ion-icon {
     .container { max-width: 1200px; }
     .hero { min-height: 770px; }
     .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
-}
+}*/
