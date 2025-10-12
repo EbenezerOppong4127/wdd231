@@ -10,20 +10,18 @@
     <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
-    <title>Local Delices Restaurant</title>
+    <title>Local Delices Restaurant - Best Burgers & Pizza in Town</title>
 
-    <!-- Meta Author -->
+    <!-- Meta Tags -->
     <meta name="author" content="Ebenezer Oppong">
-
-    <!-- ✅ FIXED: Added Meta Description -->
     <meta name="description" content="Local Delices Restaurant offers the most delicious burgers, pizza, and comfort food in town. Fast delivery, family-friendly atmosphere, and quality ingredients.">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Local Delice Food">
+    <meta property="og:title" content="Local Delices Restaurant">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ebenezeroppong4127.github.io/wdd231/chamber/images/chamber.png">
-    <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd231/chamber/images/chamber.png">
-    <meta property="og:description" content="Food is any substance consumed to provide nutritional support for an organism and Supper delicious Burger in town!">
+    <meta property="og:url" content="https://ebenezeroppong4127.github.io/wdd231/chamber/">
+    <meta property="og:description" content="Experience the finest burgers and comfort food in town with fast delivery and a family-friendly atmosphere!">
 
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="styles/style.css">
@@ -36,14 +34,383 @@
     <!-- Preload images -->
     <link rel="preload" as="image" href="images/hero-banner-bg.png" media="(min-width: 768px)">
     <link rel="preload" as="image" href="images/hero-bg.jpg">
+
+    <style>
+        /* Additional inline styles for new sections */
+        .promo-section {
+            background: linear-gradient(135deg, var(--deep-saffron), var(--dark-orange));
+            padding: 80px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .promo-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: var(--ff-rubik);
+        }
+
+        .promo-text {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-section {
+            padding: 80px 20px;
+            background-color: var(--isabelline);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--rich-black-fogra-29);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--dark-orange);
+            font-family: var(--ff-shadows-into-light);
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            color: var(--deep-saffron);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--rich-black-fogra-29);
+        }
+
+        .feature-text {
+            font-size: 1.5rem;
+            color: var(--sonic-silver);
+            line-height: 1.6;
+        }
+
+        .menu-section {
+            padding: 80px 20px;
+            background-color: var(--white);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-card {
+            background: var(--white);
+            border: 2px solid var(--cultured);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--gainsboro);
+        }
+
+        .menu-content {
+            padding: 25px;
+        }
+
+        .menu-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--rich-black-fogra-29);
+        }
+
+        .menu-description {
+            font-size: 1.4rem;
+            color: var(--sonic-silver);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .menu-price {
+            font-size: 2rem;
+            color: var(--deep-saffron);
+            font-weight: var(--fw-600);
+        }
+
+        .testimonials-section {
+            padding: 80px 20px;
+            background-color: var(--isabelline);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-2);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            color: var(--deep-saffron);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1.5rem;
+            color: var(--sonic-silver);
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 1.6rem;
+            color: var(--rich-black-fogra-29);
+            font-weight: var(--fw-600);
+        }
+
+        .testimonial-role {
+            font-size: 1.3rem;
+            color: var(--dark-orange);
+        }
+
+        .stats-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--rich-black-fogra-29), var(--onyx));
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 4.5rem;
+            font-weight: var(--fw-700);
+            color: var(--deep-saffron);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--deep-saffron), var(--tangerine));
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-family: var(--ff-rubik);
+        }
+
+        .cta-text {
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--deep-saffron);
+        }
+
+        .btn-white:hover {
+            background-color: var(--rich-black-fogra-29);
+            color: var(--white);
+        }
+
+        /* Menu Filter Styles */
+        .menu-filters {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            padding: 12px 30px;
+            background-color: var(--white);
+            color: var(--rich-black-fogra-29);
+            border: 2px solid var(--cultured);
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: var(--fw-500);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--isabelline);
+            border-color: var(--deep-saffron);
+        }
+
+        .filter-btn.active {
+            background-color: var(--deep-saffron);
+            color: var(--white);
+            border-color: var(--deep-saffron);
+        }
+
+        .menu-card {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-card.hide {
+            display: none;
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--cinnabar);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            font-weight: var(--fw-600);
+            z-index: 1;
+        }
+
+        .menu-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: var(--tangerine);
+        }
+
+        .price-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--spanish-gray);
+            font-size: 1.6rem;
+        }
+
+        .menu-ingredients {
+            font-size: 1.2rem;
+            color: var(--sonic-silver);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: var(--deep-saffron);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: var(--fw-500);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: var(--rich-black-fogra-29);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body id="top">
 
-<!-- ✅ HEADER - h1 tag removed from here -->
+<!-- HEADER -->
 <header class="header" data-header>
     <div class="container">
-        <!-- ✅ FIXED: Changed from h1 to div -->
         <div class="logo-wrapper">
             <a href="#" class="logo">Local Delices<span class="span">.</span></a>
         </div>
@@ -54,14 +421,16 @@
                     <a href="#home" class="navbar-link" data-nav-link>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog.html" class="navbar-link" data-nav-link>About Us</a>
+                    <a href="#menu" class="navbar-link" data-nav-link>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a href="foodlist.html" class="navbar-link" data-nav-link>Shop</a>
+                    <a href="#about" class="navbar-link" data-nav-link>About</a>
                 </li>
-
                 <li class="nav-item">
-                    <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+                    <a href="#testimonials" class="navbar-link" data-nav-link>Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
                 </li>
             </ul>
         </nav>
@@ -83,7 +452,7 @@
 <!-- SEARCH BOX -->
 <div class="search-container" data-search-container>
     <div class="search-box">
-        <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..." class="search-input">
+        <input type="search" name="search" aria-label="Search here" placeholder="Search for your favorite dish..." class="search-input">
         <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
             <ion-icon name="search-outline"></ion-icon>
         </button>
@@ -93,8 +462,7 @@
 
 <main>
     <article>
-        <!-- ✅ CORRECT: h1 is the first element in main -->
-        <h1 class="visually-hidden">Local Delices Restaurant - Home Page</h1>
+        <h1 class="visually-hidden">Local Delices Restaurant - Best Burgers and Pizza in Town</h1>
 
         <!-- HERO SECTION -->
         <section class="hero hero-background-article" id="home">
@@ -102,52 +470,190 @@
                 <div class="hero-content">
                     <p class="hero-subtitle">Eat Sleep And</p>
                     <h2 class="h1 hero-title">Supper delicious Burger in town!</h2>
-                    <p class="hero-text">Food is any substance consumed to provide nutritional support for an organism.</p>
+                    <p class="hero-text">Food is any substance consumed to provide nutritional support for an organism. Experience the finest quality ingredients crafted into mouthwatering dishes.</p>
                     <button class="btn">Book A Table</button>
                 </div>
 
                 <figure class="hero-banner">
                     <img src="images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true" class="w-100 hero-img-bg">
-                    <!-- ⚠️ NOTE: Compress this image to under 125 kB using tinypng.com -->
-                    <img src="images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger" class="w-100 hero-img">
+                    <img src="images/hero-banner.png" width="700" height="637" loading="lazy" alt="Delicious burger" class="w-100 hero-img">
                 </figure>
             </div>
         </section>
 
-        <!-- Rest of your HTML content continues exactly as before... -->
-        <!-- I'm keeping the rest of the code the same since only header changes were critical -->
+        <!-- PROMO SECTION -->
+        <section class="promo-section">
+            <div class="container">
+                <h2 class="promo-title">Limited Time Offer!</h2>
+                <p class="promo-text">Get 20% OFF on all orders above $50. Use code: DELICE20</p>
+                <button class="btn btn-white">Order Now</button>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="about">
+            <div class="container">
+                <p class="section-subtitle">Why Choose Us</p>
+                <h2 class="section-title">We Serve Excellence</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <ion-icon name="flame" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Fresh Ingredients</h3>
+                        <p class="feature-text">We use only the freshest, locally-sourced ingredients to ensure every bite is packed with flavor and nutrition.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <ion-icon name="bicycle" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Fast Delivery</h3>
+                        <p class="feature-text">Hot food delivered to your doorstep in 30 minutes or less. We guarantee freshness and quality with every order.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <ion-icon name="restaurant" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Expert Chefs</h3>
+                        <p class="feature-text">Our award-winning chefs bring years of culinary expertise to create dishes that delight your taste buds.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <ion-icon name="shield-checkmark" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Quality Guaranteed</h3>
+                        <p class="feature-text">100% satisfaction guaranteed or your money back. We stand behind every dish we serve with pride.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <ion-icon name="heart" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Made with Love</h3>
+                        <p class="feature-text">Every dish is prepared with passion and care, just like home-cooked meals from your favorite family recipe.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <ion-icon name="pricetag" class="feature-icon"></ion-icon>
+                        <h3 class="feature-title">Great Value</h3>
+                        <p class="feature-text">Premium quality at affordable prices. Enjoy gourmet dining without breaking the bank.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <p class="section-subtitle">Our Menu</p>
+                <h2 class="section-title">Popular Dishes</h2>
+
+                <!-- Filter Buttons -->
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="burger">Burgers</button>
+                    <button class="filter-btn" data-filter="pizza">Pizza</button>
+                    <button class="filter-btn" data-filter="chicken">Chicken</button>
+                    <button class="filter-btn" data-filter="drinks">Drinks</button>
+                </div>
+
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Menu items will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Menu Items</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Expert Chefs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <p class="section-subtitle">Testimonials</p>
+                <h2 class="section-title">What Our Customers Say</h2>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The best burger I've ever had! The ingredients are fresh, the flavors are incredible, and the service is outstanding. I'm a customer for life!</p>
+                        <div class="testimonial-author">Sarah Johnson</div>
+                        <div class="testimonial-role">Food Blogger</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Fast delivery, hot food, and amazing taste. Local Delices never disappoints. My family orders from here at least twice a week!</p>
+                        <div class="testimonial-author">Michael Chen</div>
+                        <div class="testimonial-role">Regular Customer</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The pizza here is authentic and delicious. You can taste the quality in every bite. The atmosphere is perfect for family dinners too.</p>
+                        <div class="testimonial-author">Emily Rodriguez</div>
+                        <div class="testimonial-role">Local Resident</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Hungry? Order Now!</h2>
+                <p class="cta-text">Experience the finest food delivery service in town. Fresh, fast, and absolutely delicious. Your next favorite meal is just a click away.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white">Order Online</button>
+                    <button class="btn">View Full Menu</button>
+                </div>
+            </div>
+        </section>
 
     </article>
-
 </main>
 
-<!-- FOOTER (keeping your original footer code) -->
-<footer class="footer">
+<!-- FOOTER -->
+<footer class="footer" id="contact">
     <div class="footer-top hero-background-footer">
         <div class="container">
             <div class="footer-brand">
                 <a href="" class="logo">Local Delices<span class="span">.</span></a>
                 <p class="footer-text">
-                    Financial experts support or help you to to find out which way you can raise your funds more.
+                    Serving the community with passion and dedication. Every meal is crafted with love and the finest ingredients to bring joy to your table.
                 </p>
                 <ul class="social-list">
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Twitter">
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Pinterest">
                             <ion-icon name="logo-pinterest"></ion-icon>
                         </a>
                     </li>
@@ -182,6 +688,9 @@
                 <li>
                     <p class="footer-list-item">Saturday: 10:00-16:00</p>
                 </li>
+                <li>
+                    <p class="footer-list-item">Sunday: 10:00-20:00</p>
+                </li>
             </ul>
 
             <form action="success.html" class="footer-form">
@@ -197,10 +706,11 @@
                         <option value="3 person">3 Person</option>
                         <option value="4 person">4 Person</option>
                         <option value="5 person">5 Person</option>
+                        <option value="6 person">6 Person</option>
                     </select>
                     <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
                 </div>
-                <textarea name="message" required placeholder="Message" aria-label="Message" class="input-field"></textarea>
+                <textarea name="message" required placeholder="Special requests or dietary requirements..." aria-label="Message" class="input-field"></textarea>
                 <button type="submit" class="btn">Book a Table</button>
             </form>
         </div>
@@ -208,7 +718,9 @@
 
     <div class="footer-bottom">
         <div class="container">
-
+            <p style="text-align: center; color: var(--sonic-silver); font-size: 1.4rem;">
+                &copy; 2025 Local Delices Restaurant. All Rights Reserved. | Designed with ❤️ by Ebenezer Oppong
+            </p>
         </div>
     </div>
 </footer>
@@ -221,7 +733,6 @@
 <!-- Custom JS link -->
 <script src="scripts/script.js" defer></script>
 
-<!-- Ionicon link -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

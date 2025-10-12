@@ -9,7 +9,11 @@
     "discount": "-15%",
     "rating": 5,
     "description": "Crispy and juicy fried chicken, marinated in our secret blend of 11 herbs and spices. Served hot and fresh with your choice of dipping sauce. A classic favorite that never disappoints!",
-    "ingredients": ["Chicken", "Flour", "Secret Spices", "Buttermilk", "Oil", "Salt"]
+    "ingredients": ["Chicken", "Flour", "Secret Spices", "Buttermilk", "Oil", "Salt"],
+    "calories": 450,
+    "servingSize": "4 pieces",
+    "prepTime": "25 mins",
+    "isSpicy": false
   },
   {
     "id": 2,
@@ -21,7 +25,11 @@
     "discount": "-10%",
     "rating": 5,
     "description": "A flame-grilled beef patty topped with fresh lettuce, tomatoes, pickles, onions, ketchup, and mayonnaise on a toasted sesame seed bun. The king of all burgers!",
-    "ingredients": ["Beef Patty", "Lettuce", "Tomato", "Pickles", "Onions", "Sesame Bun", "Cheese"]
+    "ingredients": ["Beef Patty", "Lettuce", "Tomato", "Pickles", "Onions", "Sesame Bun", "Cheese"],
+    "calories": 650,
+    "servingSize": "1 burger",
+    "prepTime": "15 mins",
+    "isSpicy": false
   },
   {
     "id": 3,
@@ -33,7 +41,11 @@
     "discount": "-25%",
     "rating": 5,
     "description": "Authentic Italian-style pizza with a thin crispy crust, topped with premium mozzarella cheese, fresh basil, and our signature tomato sauce. Baked to perfection in our stone oven.",
-    "ingredients": ["Pizza Dough", "Mozzarella", "Tomato Sauce", "Basil", "Olive Oil", "Garlic"]
+    "ingredients": ["Pizza Dough", "Mozzarella", "Tomato Sauce", "Basil", "Olive Oil", "Garlic"],
+    "calories": 280,
+    "servingSize": "2 slices",
+    "prepTime": "20 mins",
+    "isSpicy": false
   },
   {
     "id": 4,
@@ -45,7 +57,11 @@
     "discount": "-20%",
     "rating": 5,
     "description": "A hearty burrito filled with seasoned beef, refried beans, Spanish rice, sour cream, lettuce, tomatoes, and shredded cheese, all wrapped in a warm flour tortilla.",
-    "ingredients": ["Flour Tortilla", "Beef", "Beans", "Rice", "Cheese", "Sour Cream", "Lettuce"]
+    "ingredients": ["Flour Tortilla", "Beef", "Beans", "Rice", "Cheese", "Sour Cream", "Lettuce"],
+    "calories": 720,
+    "servingSize": "1 burrito",
+    "prepTime": "18 mins",
+    "isSpicy": true
   },
   {
     "id": 5,
@@ -57,11 +73,15 @@
     "discount": "-5%",
     "rating": 5,
     "description": "Tender chicken pieces tossed in a sweet and spicy Kung Pao sauce with roasted peanuts, bell peppers, and dried red chilies. A perfect blend of Chinese flavors!",
-    "ingredients": ["Chicken", "Peanuts", "Bell Peppers", "Soy Sauce", "Chili", "Garlic", "Ginger"]
+    "ingredients": ["Chicken", "Peanuts", "Bell Peppers", "Soy Sauce", "Chili", "Garlic", "Ginger"],
+    "calories": 520,
+    "servingSize": "1 bowl",
+    "prepTime": "22 mins",
+    "isSpicy": true
   },
   {
     "id": 6,
-    "name": "Wendy's Chicken",
+    "name": "Wendy's Chicken Sandwich",
     "category": "chicken",
     "image": "images/food-menu-6.png",
     "price": 49.00,
@@ -69,7 +89,11 @@
     "discount": "-15%",
     "rating": 5,
     "description": "Premium chicken breast, lightly breaded and fried until golden brown. Served with crispy lettuce, tomato, and our special mayo on a soft brioche bun.",
-    "ingredients": ["Chicken Breast", "Lettuce", "Tomato", "Brioche Bun", "Mayo", "Pickles"]
+    "ingredients": ["Chicken Breast", "Lettuce", "Tomato", "Brioche Bun", "Mayo", "Pickles"],
+    "calories": 580,
+    "servingSize": "1 sandwich",
+    "prepTime": "16 mins",
+    "isSpicy": false
   },
   {
     "id": 7,
@@ -81,7 +105,11 @@
     "discount": "-20%",
     "rating": 5,
     "description": "Loaded with spicy pepperoni slices, extra cheese, and a zesty tomato sauce. Every bite is a flavor explosion!",
-    "ingredients": ["Pizza Dough", "Pepperoni", "Mozzarella", "Tomato Sauce", "Oregano"]
+    "ingredients": ["Pizza Dough", "Pepperoni", "Mozzarella", "Tomato Sauce", "Oregano"],
+    "calories": 320,
+    "servingSize": "2 slices",
+    "prepTime": "20 mins",
+    "isSpicy": true
   },
   {
     "id": 8,
@@ -93,6 +121,170 @@
     "discount": "-25%",
     "rating": 5,
     "description": "Freshly squeezed lemonade made with real lemons, pure cane sugar, and a hint of mint. Perfectly refreshing on a hot day!",
-    "ingredients": ["Fresh Lemons", "Sugar", "Water", "Mint", "Ice"]
+    "ingredients": ["Fresh Lemons", "Sugar", "Water", "Mint", "Ice"],
+    "calories": 150,
+    "servingSize": "16 oz",
+    "prepTime": "5 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 9,
+    "name": "Spicy Buffalo Wings",
+    "category": "chicken",
+    "image": "images/food-menu-1.png",
+    "price": 39.00,
+    "originalPrice": 55.00,
+    "discount": "-30%",
+    "rating": 4,
+    "description": "Crispy chicken wings coated in our signature buffalo sauce with a kick of heat. Served with blue cheese dressing and celery sticks for the perfect balance.",
+    "ingredients": ["Chicken Wings", "Buffalo Sauce", "Butter", "Hot Sauce", "Blue Cheese", "Celery"],
+    "calories": 480,
+    "servingSize": "8 wings",
+    "prepTime": "28 mins",
+    "isSpicy": true
+  },
+  {
+    "id": 10,
+    "name": "Deluxe Cheeseburger",
+    "category": "burger",
+    "image": "images/food-menu-2.png",
+    "price": 35.00,
+    "originalPrice": 45.00,
+    "discount": "-22%",
+    "rating": 5,
+    "description": "Double beef patties with melted cheddar cheese, crispy bacon, caramelized onions, fresh lettuce, and our special house sauce on a toasted pretzel bun.",
+    "ingredients": ["Double Beef Patty", "Cheddar Cheese", "Bacon", "Lettuce", "Caramelized Onions", "Pretzel Bun"],
+    "calories": 820,
+    "servingSize": "1 burger",
+    "prepTime": "18 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 11,
+    "name": "Vegetarian Supreme Pizza",
+    "category": "pizza",
+    "image": "images/food-menu-3.png",
+    "price": 45.00,
+    "originalPrice": 60.00,
+    "discount": "-25%",
+    "rating": 5,
+    "description": "A garden-fresh delight loaded with bell peppers, mushrooms, red onions, black olives, tomatoes, and fresh spinach on our signature crust with marinara sauce.",
+    "ingredients": ["Pizza Dough", "Bell Peppers", "Mushrooms", "Olives", "Spinach", "Tomatoes", "Mozzarella"],
+    "calories": 240,
+    "servingSize": "2 slices",
+    "prepTime": "22 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 12,
+    "name": "BBQ Bacon Burger",
+    "category": "burger",
+    "image": "images/food-menu-4.png",
+    "price": 42.00,
+    "originalPrice": 58.00,
+    "discount": "-28%",
+    "rating": 5,
+    "description": "Juicy beef patty smothered in tangy BBQ sauce, topped with crispy bacon strips, fried onion rings, pepper jack cheese, and coleslaw on a buttered brioche bun.",
+    "ingredients": ["Beef Patty", "BBQ Sauce", "Bacon", "Onion Rings", "Pepper Jack", "Coleslaw"],
+    "calories": 750,
+    "servingSize": "1 burger",
+    "prepTime": "20 mins",
+    "isSpicy": true
+  },
+  {
+    "id": 13,
+    "name": "Teriyaki Chicken Bowl",
+    "category": "chicken",
+    "image": "images/food-menu-5.png",
+    "price": 38.00,
+    "originalPrice": 52.00,
+    "discount": "-27%",
+    "rating": 4,
+    "description": "Grilled chicken breast glazed with sweet teriyaki sauce, served over steamed jasmine rice with stir-fried vegetables and sesame seeds. A healthy and delicious option!",
+    "ingredients": ["Chicken Breast", "Teriyaki Sauce", "Jasmine Rice", "Broccoli", "Carrots", "Sesame Seeds"],
+    "calories": 420,
+    "servingSize": "1 bowl",
+    "prepTime": "25 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 14,
+    "name": "Strawberry Milkshake",
+    "category": "drinks",
+    "image": "images/food-menu-6.png",
+    "price": 18.00,
+    "originalPrice": 25.00,
+    "discount": "-28%",
+    "rating": 5,
+    "description": "Creamy and smooth milkshake made with fresh strawberries, premium vanilla ice cream, and whole milk. Topped with whipped cream and a fresh strawberry.",
+    "ingredients": ["Fresh Strawberries", "Vanilla Ice Cream", "Whole Milk", "Whipped Cream", "Sugar"],
+    "calories": 380,
+    "servingSize": "16 oz",
+    "prepTime": "8 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 15,
+    "name": "Meat Lovers Pizza",
+    "category": "pizza",
+    "image": "images/food-menu-3.png",
+    "price": 62.00,
+    "originalPrice": 85.00,
+    "discount": "-27%",
+    "rating": 5,
+    "description": "The ultimate carnivore's dream! Topped with pepperoni, Italian sausage, bacon, ham, and ground beef on a thick crust with extra mozzarella and parmesan cheese.",
+    "ingredients": ["Pepperoni", "Sausage", "Bacon", "Ham", "Ground Beef", "Mozzarella", "Parmesan"],
+    "calories": 380,
+    "servingSize": "2 slices",
+    "prepTime": "25 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 16,
+    "name": "Iced Coffee Delight",
+    "category": "drinks",
+    "image": "images/food-menu-2.png",
+    "price": 12.00,
+    "originalPrice": 18.00,
+    "discount": "-33%",
+    "rating": 4,
+    "description": "Smooth cold brew coffee served over ice with a splash of cream and your choice of flavor syrup. Perfect pick-me-up for any time of day!",
+    "ingredients": ["Cold Brew Coffee", "Ice", "Cream", "Vanilla Syrup", "Sugar"],
+    "calories": 120,
+    "servingSize": "16 oz",
+    "prepTime": "5 mins",
+    "isSpicy": false
+  },
+  {
+    "id": 17,
+    "name": "Nashville Hot Chicken",
+    "category": "chicken",
+    "image": "images/food-menu-1.png",
+    "price": 44.00,
+    "originalPrice": 62.00,
+    "discount": "-29%",
+    "rating": 5,
+    "description": "Crispy fried chicken breast with Nashville-style hot sauce, pickles, and coleslaw on a toasted bun. Warning: This one packs serious heat!",
+    "ingredients": ["Chicken Breast", "Hot Sauce", "Cayenne Pepper", "Pickles", "Coleslaw", "White Bread"],
+    "calories": 620,
+    "servingSize": "1 sandwich",
+    "prepTime": "22 mins",
+    "isSpicy": true
+  },
+  {
+    "id": 18,
+    "name": "Tropical Smoothie",
+    "category": "drinks",
+    "image": "images/food-menu-6.png",
+    "price": 16.00,
+    "originalPrice": 22.00,
+    "discount": "-27%",
+    "rating": 5,
+    "description": "A refreshing blend of mango, pineapple, banana, and coconut milk. Packed with vitamins and perfect for a healthy boost!",
+    "ingredients": ["Mango", "Pineapple", "Banana", "Coconut Milk", "Ice", "Honey"],
+    "calories": 220,
+    "servingSize": "16 oz",
+    "prepTime": "6 mins",
+    "isSpicy": false
   }
 ]
